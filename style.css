@@ -46,3 +46,84 @@ body {
 /* CTA buttons */
 .cta-btn-white:hover { background: #F0F4FF !important; }
 .cta-btn-outline:hover { border-color: rgba(255,255,255,0.7) !important; }
+
+/* ── 태블릿 (≤1024px) ── */
+@media (max-width: 1024px) {
+  #main-nav { padding: 0 32px !important; }
+  #main-nav > div { max-width: 100% !important; }
+}
+
+/* ── 모바일 (≤768px) ── */
+@media (max-width: 768px) {
+  /* NAV */
+  #main-nav { padding: 0 20px !important; height: 56px !important; }
+  #main-nav > div { gap: 0 !important; }
+  #main-nav > div > div:first-child img { height: 32px !important; }
+  #main-nav > div > div:first-child span { font-size: 20px !important; }
+  #main-nav > div > div:last-child > a:not(:last-child) { display: none !important; }
+  #main-nav > div > div:last-child { gap: 0 !important; }
+  #main-nav > div > div:last-child > a:last-child { font-size: 18px !important; padding: 8px 14px !important; }
+
+  /* HERO */
+  section[style*="min-height:100vh"] { padding: 80px 20px 48px !important; }
+  section[style*="min-height:100vh"] > div[style*="max-width"] { flex-direction: column !important; gap: 32px !important; }
+  section[style*="min-height:100vh"] h1 { font-size: 36px !important; margin-bottom: 16px !important; }
+  section[style*="min-height:100vh"] p[style*="font-size:40px"] { font-size: 22px !important; }
+  section[style*="min-height:100vh"] p[style*="font-size:28px"] { font-size: 17px !important; margin-bottom: 24px !important; }
+  section[style*="min-height:100vh"] div[style*="gap:14px"] a { font-size: 20px !important; padding: 12px 20px !important; }
+  section[style*="min-height:100vh"] div[style*="flex:0 0 560px"] { display: none !important; }
+
+  /* FEATURES */
+  #about { padding: 48px 20px !important; }
+  #about > div > div { grid-template-columns: 1fr !important; gap: 16px !important; }
+
+  /* WHY */
+  section[style*="background:#F5F8FF"] { padding: 48px 20px !important; }
+  section[style*="background:#F5F8FF"] > div > h2 { font-size: 36px !important; margin-bottom: 28px !important; }
+  section[style*="background:#F5F8FF"] > div > div[style*="grid-template-columns:repeat(4"] { grid-template-columns: 1fr !important; gap: 16px !important; }
+  section[style*="background:#F5F8FF"] > div > div > div[style*="display:flex;align-items:stretch"] { flex-direction: column !important; }
+
+  /* CURRICULUM */
+  #curriculum { padding: 48px 20px !important; }
+  #curriculum h2 { font-size: 36px !important; }
+  #curriculum > div > div[style*="justify-content:center"] { overflow-x: auto !important; padding-bottom: 16px !important; }
+
+  /* TARGET */
+  #target { padding: 48px 20px !important; }
+  #target h2 { font-size: 36px !important; margin-bottom: 28px !important; }
+  #target > div > div { grid-template-columns: 1fr 1fr !important; gap: 16px !important; }
+
+  /* RESULTS */
+  #results { padding: 48px 20px !important; }
+  #results h2 { font-size: 36px !important; margin-bottom: 28px !important; }
+  #results > div > div { grid-template-columns: 1fr 1fr !important; gap: 16px !important; }
+  #results div[style*="font-size:112px"] { font-size: 64px !important; }
+  #results div[style*="font-size:104px"] { font-size: 56px !important; }
+
+  /* FLOW */
+  section[style*="max-width:1500px"] { padding: 48px 20px !important; }
+  section[style*="max-width:1500px"] h2 { font-size: 36px !important; }
+  section[style*="max-width:1500px"] > div > div[style*="gap:0"] { flex-direction: column !important; align-items: center !important; gap: 8px !important; }
+  section[style*="max-width:1500px"] > div > div > div[style*="flex:0 0 36px"] { transform: rotate(90deg) !important; }
+
+  /* CTA */
+  #apply { padding: 48px 20px !important; }
+  #apply > div { flex-direction: column !important; text-align: center !important; gap: 24px !important; }
+  #apply h2 { font-size: 30px !important; }
+  #apply p { font-size: 18px !important; }
+  #apply > div > div:last-child { width: 100% !important; }
+  #apply > div > div:last-child a { font-size: 20px !important; }
+
+  /* FOOTER */
+  #contact { padding: 32px 20px !important; }
+  #contact > div { flex-direction: column !important; gap: 16px !important; text-align: center !important; align-items: center !important; }
+  #contact > div > div[style*="display:flex;gap:28px"] { flex-direction: column !important; gap: 8px !important; font-size: 18px !important; }
+  #contact > div > div:first-child { font-size: 24px !important; }
+  #contact > div > div:last-child { font-size: 16px !important; }
+}
+
+/* ── 소형 모바일 (≤480px) ── */
+@media (max-width: 480px) {
+  #target > div > div { grid-template-columns: 1fr !important; }
+  #results > div > div { grid-template-columns: 1fr !important; }
+}
