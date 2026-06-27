@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 마케팅스쿨 16기</title>
+  <meta name="description" content="AI로 생산성, 수익화, 자동화 그리고 업무시스템까지. 12주 완성 커리큘럼으로 AI 업무 시스템을 완전히 내 것으로 만드세요.">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav" style="position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(5,11,44,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 64px;transition:background 0.3s,box-shadow 0.3s;border-bottom:1px solid rgba(255,255,255,0.07);">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <img src="./assets/logo.png" style="height:44px;width:auto;" alt="logo">
+    <span style="font-size:36px;font-weight:900;color:#fff;letter-spacing:-0.3px;">AI 마케팅스쿨 16기</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:34px;">
+    <a href="#about" class="nav-link" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:28px;font-weight:500;">과정 소개</a>
+    <a href="#curriculum" class="nav-link" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:28px;font-weight:500;">커리큘럼</a>
+    <a href="#target" class="nav-link" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:28px;font-weight:500;">수강 대상</a>
+    <a href="#results" class="nav-link" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:28px;font-weight:500;">수강 효과</a>
+    <a href="#contact" class="nav-link" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:28px;font-weight:500;">문의</a>
+    <a href="#apply" class="nav-apply" style="background:#2563EB;color:#fff;text-decoration:none;font-size:28px;font-weight:700;padding:10px 22px;border-radius:8px;">무료 상담 신청</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="min-height:100vh;background:linear-gradient(145deg,#040C28 0%,#060E2E 35%,#091440 65%,#0D1E58 100%);position:relative;overflow:hidden;display:flex;align-items:center;padding:100px 64px 80px;">
+  <div style="position:absolute;top:12%;right:22%;width:560px;height:560px;background:radial-gradient(circle,rgba(37,99,235,0.14) 0%,transparent 70%);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:15%;left:8%;width:380px;height:380px;background:radial-gradient(circle,rgba(6,182,212,0.07) 0%,transparent 70%);pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.12) 1px,transparent 1px);background-size:72px 72px;pointer-events:none;opacity:0.35;"></div>
+  <div style="max-width:1680px;margin:0 auto;width:100%;display:flex;align-items:center;gap:40px;">
+
+    <!-- Left text -->
+    <div style="flex:1;min-width:0;z-index:2;">
+      <h1 style="font-size:69px;font-weight:900;line-height:1.22;color:#fff;margin:0 0 22px;letter-spacing:-1px;">
+        AI로 생산성, 수익화,<br>
+        <span style="background:linear-gradient(90deg,#06D6FF,#60A5FA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">자동화 그리고</span><br>
+        업무시스템까지
+      </h1>
+      <p style="font-size:40px;font-weight:700;color:rgba(255,255,255,0.92);margin:0 0 10px;line-height:1.65;">아이디어만 있으면 됩니다.<br>나머지는 AI가 만들어 줍니다.</p>
+      <p style="font-size:28px;color:rgba(255,255,255,0.5);margin:0 0 36px;line-height:1.9;">12주 완성 커리큘럼으로 AI 업무 시스템을 완전히 내 것으로 만드세요.</p>
+      <div style="display:flex;gap:14px;margin-bottom:36px;">
+        <a href="#apply" class="btn-primary" style="background:#2563EB;color:#fff;text-decoration:none;font-size:32px;font-weight:700;padding:15px 34px;border-radius:10px;box-shadow:0 6px 28px rgba(37,99,235,0.45);display:inline-block;">지금 신청하기</a>
+        <a href="#curriculum" class="btn-outline" style="border:2px solid rgba(255,255,255,0.32);color:rgba(255,255,255,0.88);text-decoration:none;font-size:32px;font-weight:600;padding:13px 28px;border-radius:10px;display:inline-block;">커리큘럼 보기</a>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:50px;padding:7px 16px;">
+          <svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 0 L7.5 4.5 L12 5.2 L8.8 8.3 L9.8 12 L6 9.8 L2.2 12 L3.2 8.3 L0 5.2 L4.5 4.5 Z" fill="#FBBF24"></path></svg>
+          <span style="color:rgba(255,255,255,0.85);font-size:24px;font-weight:600;">생산성</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:50px;padding:7px 16px;">
+          <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" stroke="#10B981" stroke-width="1.5" fill="none"></circle><path d="M3.5 6 L5 7.5 L8.5 4.5" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+          <span style="color:rgba(255,255,255,0.85);font-size:24px;font-weight:600;">수익화</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:50px;padding:7px 16px;">
+          <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="2.5" fill="#818CF8"></circle><circle cx="6" cy="6" r="5" stroke="#818CF8" stroke-width="1.2" fill="none" stroke-dasharray="2.5 1.5"></circle></svg>
+          <span style="color:rgba(255,255,255,0.85);font-size:24px;font-weight:600;">자동화</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:50px;padding:7px 16px;">
+          <svg width="12" height="12" viewBox="0 0 12 12"><rect x="1" y="1" width="10" height="3" rx="1" fill="#FBBF24"></rect><rect x="1" y="5" width="10" height="3" rx="1" fill="#FBBF24" opacity="0.7"></rect><rect x="1" y="9" width="10" height="3" rx="1" fill="#FBBF24" opacity="0.4"></rect></svg>
+          <span style="color:rgba(255,255,255,0.85);font-size:24px;font-weight:600;">업무시스템</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right laptop -->
+    <div style="flex:0 0 560px;position:relative;height:460px;z-index:2;">
+
+      <div style="position:absolute;top:24px;left:8px;z-index:4;animation:floatA 4.5s ease-in-out infinite;">
+        <div style="background:linear-gradient(135deg,#1E3A8A,#2563EB);border-radius:14px;padding:10px 14px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(37,99,235,0.45);">
+          <div style="width:32px;height:32px;background:rgba(255,255,255,0.18);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 14 A8 8 0 1 1 15 14" stroke="#93C5FD" stroke-width="2" fill="none" stroke-linecap="round"></path><line x1="9" y1="9" x2="6" y2="6" stroke="#BFDBFE" stroke-width="2" stroke-linecap="round"></line><circle cx="9" cy="9" r="1.5" fill="#93C5FD"></circle></svg>
+          </div>
+          <span style="color:#fff;font-size:26px;font-weight:700;">생산성</span>
+        </div>
+      </div>
+
+      <div style="position:absolute;bottom:90px;left:6px;z-index:4;animation:floatY 5.5s ease-in-out infinite 1.2s;">
+        <div style="background:linear-gradient(135deg,#064E3B,#059669);border-radius:14px;padding:10px 14px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(5,150,105,0.45);">
+          <div style="width:32px;height:32px;background:rgba(255,255,255,0.18);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#6EE7B7" stroke-width="1.5" fill="none"></circle><path d="M5 11 L8 7 L11 9 L14 5" stroke="#6EE7B7" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </div>
+          <span style="color:#fff;font-size:26px;font-weight:700;">수익화</span>
+        </div>
+      </div>
+
+      <div style="position:absolute;top:38px;right:4px;z-index:4;animation:floatB 4s ease-in-out infinite 0.6s;">
+        <div style="background:linear-gradient(135deg,#2E1065,#5B21B6);border-radius:14px;padding:10px 14px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(91,33,182,0.45);">
+          <div style="width:32px;height:32px;background:rgba(255,255,255,0.18);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="3.5" fill="#A78BFA"></circle><circle cx="9" cy="9" r="7" stroke="#A78BFA" stroke-width="1.5" fill="none" stroke-dasharray="3 2"></circle></svg>
+          </div>
+          <span style="color:#fff;font-size:26px;font-weight:700;">자동화</span>
+        </div>
+      </div>
+
+      <div style="position:absolute;bottom:100px;right:4px;z-index:4;animation:floatA 5s ease-in-out infinite 1.8s;">
+        <div style="background:linear-gradient(135deg,#78350F,#D97706);border-radius:14px;padding:10px 14px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(217,119,6,0.45);">
+          <div style="width:32px;height:32px;background:rgba(255,255,255,0.18);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="4" rx="1.5" fill="#FCD34D"></rect><rect x="2" y="8.5" width="14" height="4" rx="1.5" fill="#FCD34D" opacity="0.7"></rect><rect x="2" y="14" width="14" height="4" rx="1.5" fill="#FCD34D" opacity="0.4"></rect></svg>
+          </div>
+          <span style="color:#fff;font-size:26px;font-weight:700;">업무시스템</span>
+        </div>
+      </div>
+
+      <!-- Laptop -->
+      <div style="position:absolute;top:30px;left:58px;right:58px;animation:floatY 6s ease-in-out infinite;">
+        <div style="background:linear-gradient(160deg,#1C2E62,#162148);border-radius:14px 14px 4px 4px;padding:10px;box-shadow:0 32px 80px rgba(0,0,0,0.7),0 0 0 1px rgba(255,255,255,0.06),0 0 80px rgba(37,99,235,0.16);">
+          <div style="background:#0A1230;border-radius:8px;overflow:hidden;">
+            <div style="background:#0F1A3C;padding:7px 12px;display:flex;align-items:center;gap:5px;border-bottom:1px solid rgba(255,255,255,0.05);">
+              <div style="width:8px;height:8px;border-radius:50%;background:#EF4444;"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:#F59E0B;"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:#10B981;"></div>
+              <span style="color:rgba(255,255,255,0.42);font-size:20px;margin-left:8px;font-weight:500;">AI 워크플로우 대시보드</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;padding:6px;background:#0C1432;">
+              <div style="background:#111D48;border-radius:7px;padding:9px;border:1px solid rgba(255,255,255,0.05);">
+                <div style="font-size:16px;color:rgba(255,255,255,0.38);margin-bottom:5px;font-weight:500;">자동화 워크플로우</div>
+                <div style="display:flex;align-items:center;gap:3px;margin-bottom:6px;">
+                  <div style="background:#1E3A8A;border-radius:3px;padding:2px 5px;font-size:14px;color:#93C5FD;">입력</div>
+                  <span style="color:rgba(255,255,255,0.25);font-size:16px;">→</span>
+                  <div style="background:#1E3A8A;border-radius:3px;padding:2px 5px;font-size:14px;color:#93C5FD;">AI</div>
+                  <span style="color:rgba(255,255,255,0.25);font-size:16px;">→</span>
+                  <div style="background:#14532D;border-radius:3px;padding:2px 5px;font-size:14px;color:#86EFAC;">완료</div>
+                </div>
+                <div style="height:24px;display:flex;align-items:flex-end;gap:2px;">
+                  <div style="background:#2563EB;width:7px;height:10px;border-radius:2px;"></div>
+                  <div style="background:#2563EB;width:7px;height:16px;border-radius:2px;"></div>
+                  <div style="background:#3B82F6;width:7px;height:13px;border-radius:2px;"></div>
+                  <div style="background:#60A5FA;width:7px;height:20px;border-radius:2px;"></div>
+                  <div style="background:#3B82F6;width:7px;height:15px;border-radius:2px;"></div>
+                  <div style="background:#2563EB;width:7px;height:24px;border-radius:2px;"></div>
+                </div>
+              </div>
+              <div style="background:#111D48;border-radius:7px;padding:9px;border:1px solid rgba(255,255,255,0.05);">
+                <div style="font-size:16px;color:rgba(255,255,255,0.38);margin-bottom:3px;font-weight:500;">콘텐츠 제작</div>
+                <div style="font-size:44px;font-weight:800;color:#fff;line-height:1;margin-bottom:2px;">125</div>
+                <div style="font-size:15px;color:#10B981;margin-bottom:5px;">+23% 이번 달</div>
+                <div style="height:5px;background:rgba(255,255,255,0.07);border-radius:3px;overflow:hidden;">
+                  <div style="background:linear-gradient(90deg,#2563EB,#06D6FF);height:100%;width:78%;border-radius:3px;"></div>
+                </div>
+                <div style="font-size:14px;color:rgba(255,255,255,0.28);margin-top:3px;">목표: 160건</div>
+              </div>
+              <div style="background:#111D48;border-radius:7px;padding:9px;border:1px solid rgba(255,255,255,0.05);">
+                <div style="font-size:16px;color:rgba(255,255,255,0.38);margin-bottom:4px;font-weight:500;">생산성 지표</div>
+                <div style="display:flex;align-items:center;gap:7px;">
+                  <div style="position:relative;width:38px;height:38px;flex-shrink:0;">
+                    <svg width="38" height="38" viewBox="0 0 38 38">
+                      <circle cx="19" cy="19" r="14" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="5"></circle>
+                      <circle cx="19" cy="19" r="14" fill="none" stroke="#2563EB" stroke-width="5" stroke-dasharray="65 87.9" stroke-dashoffset="22" stroke-linecap="round" transform="rotate(-90 19 19)"></circle>
+                    </svg>
+                    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff;">78%</div>
+                  </div>
+                  <div>
+                    <div style="font-size:15px;color:rgba(255,255,255,0.4);">업무 효율</div>
+                    <div style="font-size:15px;color:#10B981;margin-top:2px;">+12% 전월比</div>
+                  </div>
+                </div>
+              </div>
+              <div style="background:#111D48;border-radius:7px;padding:9px;border:1px solid rgba(255,255,255,0.05);">
+                <div style="font-size:16px;color:rgba(255,255,255,0.38);margin-bottom:3px;font-weight:500;">수익화 현황</div>
+                <div style="font-size:26px;font-weight:800;color:#fff;line-height:1.3;">₩12,450,000</div>
+                <div style="display:flex;align-items:center;gap:3px;margin-top:2px;margin-bottom:5px;">
+                  <svg width="7" height="7" viewBox="0 0 7 7"><polygon points="3.5,0 7,7 0,7" fill="#10B981"></polygon></svg>
+                  <span style="font-size:15px;color:#10B981;font-weight:600;">+32%</span>
+                  <span style="font-size:14px;color:rgba(255,255,255,0.3);">전월比</span>
+                </div>
+                <div style="height:18px;display:flex;align-items:flex-end;gap:2px;">
+                  <div style="background:#1D4ED8;width:6px;height:8px;border-radius:1px;"></div>
+                  <div style="background:#1D4ED8;width:6px;height:12px;border-radius:1px;"></div>
+                  <div style="background:#2563EB;width:6px;height:10px;border-radius:1px;"></div>
+                  <div style="background:#3B82F6;width:6px;height:14px;border-radius:1px;"></div>
+                  <div style="background:#10B981;width:6px;height:18px;border-radius:1px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(180deg,#1A2B5E,#142040);height:14px;border-radius:0 0 6px 6px;"></div>
+        <div style="background:#101830;height:5px;width:68%;margin:0 auto;border-radius:0 0 6px 6px;"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="about" style="background:#fff;padding:72px 64px;">
+  <div style="max-width:1680px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+
+      <div class="feature-card" style="text-align:center;padding:36px 24px;border-radius:16px;border:1.5px solid #E5E7EB;">
+        <div style="width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M6 28 A15 15 0 1 1 34 28" stroke="#2563EB" stroke-width="2.5" fill="none" stroke-linecap="round"></path><line x1="20" y1="20" x2="14" y2="14" stroke="#1D4ED8" stroke-width="3" stroke-linecap="round"></line><circle cx="20" cy="20" r="3" fill="#1D4ED8"></circle></svg>
+        </div>
+        <h3 style="font-size:34px;font-weight:700;color:#111827;margin:0 0 10px;">생산성 향상</h3>
+        <p style="font-size:27px;color:#6B7280;line-height:1.75;margin:0;">AI 도구와 자동화로<br>업무 효율을 극대화합니다.</p>
+      </div>
+
+      <div class="feature-card-green" style="text-align:center;padding:36px 24px;border-radius:16px;border:1.5px solid #E5E7EB;">
+        <div style="width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,#ECFDF5,#D1FAE5);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="7" y="24" width="6" height="10" rx="2" fill="#10B981"></rect><rect x="17" y="17" width="6" height="17" rx="2" fill="#10B981"></rect><rect x="27" y="10" width="6" height="24" rx="2" fill="#10B981"></rect><polyline points="10,22 20,15 30,8" stroke="#065F46" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>
+        </div>
+        <h3 style="font-size:34px;font-weight:700;color:#111827;margin:0 0 10px;">수익화 구조 설계</h3>
+        <p style="font-size:27px;color:#6B7280;line-height:1.75;margin:0;">아이디어를 수익으로 연결하는<br>구조를 설계합니다.</p>
+      </div>
+
+      <div class="feature-card-purple" style="text-align:center;padding:36px 24px;border-radius:16px;border:1.5px solid #E5E7EB;">
+        <div style="width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,#EDE9FE,#DDD6FE);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="12" y="14" width="16" height="16" rx="3" fill="#7C3AED"></rect><rect x="16" y="18" width="4" height="4" rx="1" fill="white"></rect><rect x="23" y="18" width="4" height="4" rx="1" fill="white"></rect><rect x="17" y="24" width="7" height="2.5" rx="1" fill="white"></rect><rect x="18" y="8" width="4" height="6" rx="1.5" fill="#7C3AED" opacity="0.7"></rect><line x1="20" y1="8" x2="20" y2="14" stroke="#7C3AED" stroke-width="2"></line></svg>
+        </div>
+        <h3 style="font-size:34px;font-weight:700;color:#111827;margin:0 0 10px;">자동화 구축</h3>
+        <p style="font-size:27px;color:#6B7280;line-height:1.75;margin:0;">반복 업무를 자동화하여<br>시간을 절약합니다.</p>
+      </div>
+
+      <div class="feature-card-yellow" style="text-align:center;padding:36px 24px;border-radius:16px;border:1.5px solid #E5E7EB;">
+        <div style="width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,#FFFBEB,#FEF3C7);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M9 14 L20 9 L31 14 L20 19 Z" fill="#F59E0B"></path><path d="M9 21 L20 16 L31 21 L20 26 Z" fill="#FCD34D" opacity="0.85"></path><path d="M9 28 L20 23 L31 28 L20 33 Z" fill="#FDE68A" opacity="0.7"></path></svg>
+        </div>
+        <h3 style="font-size:34px;font-weight:700;color:#111827;margin:0 0 10px;">업무 시스템 정착</h3>
+        <p style="font-size:27px;color:#6B7280;line-height:1.75;margin:0;">AI 기반 업무 시스템으로<br>지속 가능한 성과를 만듭니다.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section style="background:#F5F8FF;padding:80px 64px;">
+  <div style="max-width:1680px;margin:0 auto;">
+    <h2 style="text-align:center;font-size:68px;font-weight:800;color:#111827;margin:0 0 48px;letter-spacing:-0.5px;">왜 AI마케팅스쿨인가?</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+
+      <div style="display:flex;align-items:stretch;gap:6px;">
+        <div style="flex:1;background:#fff;border-radius:12px;padding:16px;border:1.5px solid #E5E7EB;">
+          <span style="display:inline-block;background:#F3F4F6;border-radius:4px;padding:2px 8px;font-size:20px;font-weight:600;color:#9CA3AF;margin-bottom:10px;">Before</span>
+          <div style="width:44px;height:44px;background:#F9FAFB;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="5" fill="#D1D5DB" stroke="#9CA3AF" stroke-width="1.5"></circle><path d="M4 20 C4 15 7 12 12 12 C17 12 20 15 20 20" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1.5"></path></svg>
+          </div>
+          <p style="font-size:24px;color:#374151;font-weight:600;margin:0;line-height:1.5;">혼자서 모든 업무를 처리</p>
+        </div>
+        <div style="display:flex;align-items:center;flex-shrink:0;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8 L12 8" stroke="#2563EB" stroke-width="2" stroke-linecap="round"></path><path d="M10 5 L13 8 L10 11" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+        </div>
+        <div style="flex:1;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);border-radius:12px;padding:16px;border:2px solid #BFDBFE;">
+          <span style="display:inline-block;background:#2563EB;border-radius:4px;padding:2px 8px;font-size:20px;font-weight:700;color:#fff;margin-bottom:10px;">After</span>
+          <div style="width:44px;height:44px;background:rgba(37,99,235,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="8" r="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"></circle><path d="M2 19 C2 15 4.5 12.5 8 12.5 C11.5 12.5 14 15 14 19" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"></path><rect x="15" y="9" width="7" height="6" rx="1.5" fill="#2563EB"></rect><rect x="16.5" y="10.5" width="2" height="2" rx="0.5" fill="white"></rect><rect x="19.5" y="10.5" width="2" height="2" rx="0.5" fill="white"></rect></svg>
+          </div>
+          <p style="font-size:24px;color:#1D4ED8;font-weight:700;margin:0;line-height:1.5;">AI와 함께 빠르게 실행</p>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:stretch;gap:6px;">
+        <div style="flex:1;background:#fff;border-radius:12px;padding:16px;border:1.5px solid #E5E7EB;">
+          <span style="display:inline-block;background:#F3F4F6;border-radius:4px;padding:2px 8px;font-size:20px;font-weight:600;color:#9CA3AF;margin-bottom:10px;">Before</span>
+          <div style="width:44px;height:44px;background:#F9FAFB;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#9CA3AF" stroke-width="1.5" fill="none"></circle><polyline points="12,6 12,12 15,15" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></polyline></svg>
+          </div>
+          <p style="font-size:24px;color:#374151;font-weight:600;margin:0;line-height:1.5;">콘텐츠 제작이 느림</p>
+        </div>
+        <div style="display:flex;align-items:center;flex-shrink:0;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8 L12 8" stroke="#2563EB" stroke-width="2" stroke-linecap="round"></path><path d="M10 5 L13 8 L10 11" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+        </div>
+        <div style="flex:1;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);border-radius:12px;padding:16px;border:2px solid #BFDBFE;">
+          <span style="display:inline-block;background:#2563EB;border-radius:4px;padding:2px 8px;font-size:20px;font-weight:700;color:#fff;margin-bottom:10px;">After</span>
+          <div style="width:44px;height:44px;background:rgba(37,99,235,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2 L8 13 L12 13 L11 22 L16 11 L12 11 Z" fill="#2563EB"></path></svg>
+          </div>
+          <p style="font-size:24px;color:#1D4ED8;font-weight:700;margin:0;line-height:1.5;">아이디어를 즉시 콘텐츠로 전환</p>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:stretch;gap:6px;">
+        <div style="flex:1;background:#fff;border-radius:12px;padding:16px;border:1.5px solid #E5E7EB;">
+          <span style="display:inline-block;background:#F3F4F6;border-radius:4px;padding:2px 8px;font-size:20px;font-weight:600;color:#9CA3AF;margin-bottom:10px;">Before</span>
+          <div style="width:44px;height:44px;background:#F9FAFB;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="17" width="4" height="5" rx="1" fill="#D1D5DB"></rect><rect x="10" y="12" width="4" height="10" rx="1" fill="#D1D5DB"></rect><rect x="17" y="7" width="4" height="15" rx="1" fill="#D1D5DB"></rect><polyline points="5,15 12,10 19,5" stroke="#EF4444" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-dasharray="2 2"></polyline></svg>
+          </div>
+          <p style="font-size:24px;color:#374151;font-weight:600;margin:0;line-height:1.5;">매출 연결이 어려움</p>
+        </div>
+        <div style="display:flex;align-items:center;flex-shrink:0;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8 L12 8" stroke="#2563EB" stroke-width="2" stroke-linecap="round"></path><path d="M10 5 L13 8 L10 11" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+        </div>
+        <div style="flex:1;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);border-radius:12px;padding:16px;border:2px solid #BFDBFE;">
+          <span style="display:inline-block;background:#2563EB;border-radius:4px;padding:2px 8px;font-size:20px;font-weight:700;color:#fff;margin-bottom:10px;">After</span>
+          <div style="width:44px;height:44px;background:rgba(37,99,235,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 3 L19 3 L16 9 L20 9 L11 22 L13 12 L9 12 Z" fill="#2563EB"></path></svg>
+          </div>
+          <p style="font-size:24px;color:#1D4ED8;font-weight:700;margin:0;line-height:1.5;">수익화 퍼널 설계 가능</p>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:stretch;gap:6px;">
+        <div style="flex:1;background:#fff;border-radius:12px;padding:16px;border:1.5px solid #E5E7EB;">
+          <span style="display:inline-block;background:#F3F4F6;border-radius:4px;padding:2px 8px;font-size:20px;font-weight:600;color:#9CA3AF;margin-bottom:10px;">Before</span>
+          <div style="width:44px;height:44px;background:#F9FAFB;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 4 A8 8 0 0 1 20 12" stroke="#9CA3AF" stroke-width="1.5" fill="none" stroke-linecap="round"></path><path d="M20 12 A8 8 0 0 1 12 20" stroke="#D1D5DB" stroke-width="1.5" fill="none" stroke-linecap="round"></path><path d="M12 20 A8 8 0 0 1 4 12" stroke="#9CA3AF" stroke-width="1.5" fill="none" stroke-linecap="round"></path><path d="M4 12 A8 8 0 0 1 12 4" stroke="#D1D5DB" stroke-width="1.5" fill="none" stroke-linecap="round"></path><polygon points="12,2 14.5,5.5 9.5,5.5" fill="#9CA3AF"></polygon></svg>
+          </div>
+          <p style="font-size:24px;color:#374151;font-weight:600;margin:0;line-height:1.5;">반복 업무에 시간 낭비</p>
+        </div>
+        <div style="display:flex;align-items:center;flex-shrink:0;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8 L12 8" stroke="#2563EB" stroke-width="2" stroke-linecap="round"></path><path d="M10 5 L13 8 L10 11" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+        </div>
+        <div style="flex:1;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);border-radius:12px;padding:16px;border:2px solid #BFDBFE;">
+          <span style="display:inline-block;background:#2563EB;border-radius:4px;padding:2px 8px;font-size:20px;font-weight:700;color:#fff;margin-bottom:10px;">After</span>
+          <div style="width:44px;height:44px;background:rgba(37,99,235,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="#2563EB"></circle><circle cx="12" cy="12" r="8" stroke="#2563EB" stroke-width="1.5" fill="none" stroke-dasharray="3 2"></circle><path d="M12 4 A8 8 0 0 1 20 12" stroke="#2563EB" stroke-width="1.5" fill="none" stroke-linecap="round"></path><polygon points="19,9 20,12 17,11" fill="#2563EB"></polygon></svg>
+          </div>
+          <p style="font-size:24px;color:#1D4ED8;font-weight:700;margin:0;line-height:1.5;">자동화 시스템으로 시간 절약</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section id="curriculum" style="background:#fff;padding:80px 64px;">
+  <div style="max-width:1680px;margin:0 auto;">
+    <h2 style="text-align:center;font-size:68px;font-weight:800;color:#111827;margin:0 0 52px;letter-spacing:-0.5px;">12주 완성 커리큘럼</h2>
+
+    <div style="display:flex;align-items:flex-start;justify-content:center;margin-bottom:36px;">
+      <div style="display:flex;flex-direction:column;align-items:center;width:148px;">
+        <div style="background:#2563EB;color:#fff;border-radius:20px;padding:3px 12px;font-size:22px;font-weight:700;margin-bottom:8px;">1주차</div>
+        <div style="width:64px;height:64px;border-radius:50%;background:#EFF6FF;border:2px solid #BFDBFE;display:flex;align-items:center;justify-content:center;">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><circle cx="10" cy="14" r="7" stroke="#2563EB" stroke-width="2" fill="none"></circle><circle cx="20" cy="14" r="7" stroke="#2563EB" stroke-width="2" fill="none"></circle><line x1="15" y1="7" x2="15" y2="21" stroke="#2563EB" stroke-width="1.5"></line></svg>
+        </div>
+        <p style="font-size:25px;font-weight:600;color:#374151;margin:8px 0 0;text-align:center;">AI 기초 이해</p>
+      </div>
+      <div style="border-top:2px dashed #BFDBFE;flex:1;margin-top:40px;"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;width:148px;">
+        <div style="background:#2563EB;color:#fff;border-radius:20px;padding:3px 12px;font-size:22px;font-weight:700;margin-bottom:8px;">2주차</div>
+        <div style="width:64px;height:64px;border-radius:50%;background:#EFF6FF;border:2px solid #BFDBFE;display:flex;align-items:center;justify-content:center;">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="4" y="4" width="22" height="16" rx="3" fill="none" stroke="#2563EB" stroke-width="2"></rect><path d="M8 24 L6 28 L15 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linejoin="round"></path><line x1="8" y1="10" x2="22" y2="10" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"></line><line x1="8" y1="14" x2="17" y2="14" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"></line></svg>
+        </div>
+        <p style="font-size:25px;font-weight:600;color:#374151;margin:8px 0 0;text-align:center;">프롬프트 실전</p>
+      </div>
+      <div style="border-top:2px dashed #BFDBFE;flex:1;margin-top:40px;"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;width:148px;">
+        <div style="background:#D97706;color:#fff;border-radius:20px;padding:3px 12px;font-size:22px;font-weight:700;margin-bottom:8px;">3주차</div>
+        <div style="width:64px;height:64px;border-radius:50%;background:#FFFBEB;border:2px solid #FDE68A;display:flex;align-items:center;justify-content:center;">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="12" r="7" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"></circle><rect x="12" y="19" width="6" height="5" rx="1" fill="none" stroke="#F59E0B" stroke-width="2"></rect><line x1="12" y1="24" x2="18" y2="24" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"></line></svg>
+        </div>
+        <p style="font-size:25px;font-weight:600;color:#374151;margin:8px 0 0;text-align:center;">콘텐츠 기획</p>
+      </div>
+      <div style="border-top:2px dashed #FDE68A;flex:1;margin-top:40px;"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;width:148px;">
+        <div style="background:#2563EB;color:#fff;border-radius:20px;padding:3px 12px;font-size:22px;font-weight:700;margin-bottom:8px;">4주차</div>
+        <div style="width:64px;height:64px;border-radius:50%;background:#EFF6FF;border:2px solid #BFDBFE;display:flex;align-items:center;justify-content:center;">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="5" y="3" width="20" height="24" rx="3" fill="none" stroke="#2563EB" stroke-width="2"></rect><line x1="9" y1="9" x2="21" y2="9" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"></line><line x1="9" y1="13" x2="21" y2="13" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"></line><line x1="9" y1="17" x2="16" y2="17" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"></line></svg>
+        </div>
+        <p style="font-size:25px;font-weight:600;color:#374151;margin:8px 0 0;text-align:center;">블로그 제작</p>
+      </div>
+      <div style="border-top:2px dashed #BFDBFE;flex:1;margin-top:40px;"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;width:148px;">
+        <div style="background:#7C3AED;color:#fff;border-radius:20px;padding:3px 12px;font-size:22px;font-weight:700;margin-bottom:8px;">5주차</div>
+        <div style="width:64px;height:64px;border-radius:50%;background:#EDE9FE;border:2px solid #C4B5FD;display:flex;align-items:center;justify-content:center;">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="3" y="4" width="24" height="22" rx="3" fill="none" stroke="#7C3AED" stroke-width="2"></rect><polygon points="12,9 12,21 22,15" fill="#7C3AED"></polygon></svg>
+        </div>
+        <p style="font-size:25px;font-weight:600;color:#374151;margin:8px 0 0;text-align:center;">숏폼 제작</p>
+      </div>
+      <div style="border-top:2px dashed #C4B5FD;flex:1;margin-top:40px;"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;width:148px;">
+        <div style="background:#D97706;color:#fff;border-radius:20px;padding:3px 12px;font-size:22px;font-weight:700;margin-bottom:8px;">6주차</div>
+        <div style="width:64px;height:64px;border-radius:50%;background:#FFFBEB;border:2px solid #FDE68A;display:flex;align-items:center;justify-content:center;">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="3" y="3" width="24" height="24" rx="3" fill="none" stroke="#D97706" stroke-width="2"></rect><circle cx="10" cy="10" r="3" fill="#D97706"></circle><path d="M3 22 L10 16 L16 20 L21 14 L27 22" stroke="#D97706" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round"></path></svg>
+        </div>
+        <p style="font-size:25px;font-weight:600;color:#374151;margin:8px 0 0;text-align:center;">이미지 활용</p>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:flex-start;justify-content:center;">
+      <div style="display:flex;flex-direction:column;align-items:center;width:148px;">
+        <div style="background:#EF4444;color:#fff;border-radius:20px;padding:3px 12px;font-size:22px;font-weight:700;margin-bottom:8px;">7주차</div>
+        <div style="width:64px;height:64px;border-radius:50%;background:#FEF2F2;border:2px solid #FECACA;display:flex;align-items:center;justify-content:center;">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="2" y="7" width="26" height="16" rx="4" fill="none" stroke="#EF4444" stroke-width="2"></rect><polygon points="12,11 12,19 20,15" fill="#EF4444"></polygon></svg>
+        </div>
+        <p style="font-size:25px;font-weight:600;color:#374151;margin:8px 0 0;text-align:center;">유튜브 기획</p>
+      </div>
+      <div style="border-top:2px dashed #FECACA;flex:1;margin-top:40px;"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;width:148px;">
+        <div style="background:#059669;color:#fff;border-radius:20px;padding:3px 12px;font-size:22px;font-weight:700;margin-bottom:8px;">8주차</div>
+        <div style="width:64px;height:64px;border-radius:50%;background:#ECFDF5;border:2px solid #A7F3D0;display:flex;align-items:center;justify-content:center;">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><circle cx="11" cy="10" r="5" fill="none" stroke="#059669" stroke-width="2"></circle><path d="M3 24 C3 19 6.5 15.5 11 15.5 C15.5 15.5 19 19 19 24" fill="none" stroke="#059669" stroke-width="2"></path><circle cx="21" cy="10" r="4" fill="none" stroke="#059669" stroke-width="1.5" opacity="0.7"></circle><path d="M18 24 C18.5 20 20 17 21 16.5 C23 16.5 25 18.5 26.5 22" fill="none" stroke="#059669" stroke-width="1.5" opacity="0.7"></path></svg>
+        </div>
+        <p style="font-size:25px;font-weight:600;color:#374151;margin:8px 0 0;text-align:center;">리드 수집</p>
+      </div>
+      <div style="border-top:2px dashed #A7F3D0;flex:1;margin-top:40px;"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;width:148px;">
+        <div style="background:#D97706;color:#fff;border-radius:20px;padding:3px 12px;font-size:22px;font-weight:700;margin-bottom:8px;">9주차</div>
+        <div style="width:64px;height:64px;border-radius:50%;background:#FFFBEB;border:2px solid #FDE68A;display:flex;align-items:center;justify-content:center;">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M15 3 L27 9 L27 21 L15 27 L3 21 L3 9 Z" fill="none" stroke="#D97706" stroke-width="2"></path><line x1="15" y1="3" x2="15" y2="27" stroke="#D97706" stroke-width="1.5"></line><line x1="3" y1="9" x2="27" y2="9" stroke="#D97706" stroke-width="1.5"></line></svg>
+        </div>
+        <p style="font-size:25px;font-weight:600;color:#374151;margin:8px 0 0;text-align:center;">상품 설계</p>
+      </div>
+      <div style="border-top:2px dashed #FDE68A;flex:1;margin-top:40px;"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;width:148px;">
+        <div style="background:#7C3AED;color:#fff;border-radius:20px;padding:3px 12px;font-size:22px;font-weight:700;margin-bottom:8px;">10주차</div>
+        <div style="width:64px;height:64px;border-radius:50%;background:#EDE9FE;border:2px solid #C4B5FD;display:flex;align-items:center;justify-content:center;">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="5" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"></circle><circle cx="15" cy="15" r="10" fill="none" stroke="#7C3AED" stroke-width="2" stroke-dasharray="4 2.5"></circle></svg>
+        </div>
+        <p style="font-size:25px;font-weight:600;color:#374151;margin:8px 0 0;text-align:center;">자동화 구축</p>
+      </div>
+      <div style="border-top:2px dashed #C4B5FD;flex:1;margin-top:40px;"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;width:148px;">
+        <div style="background:#2563EB;color:#fff;border-radius:20px;padding:3px 12px;font-size:22px;font-weight:700;margin-bottom:8px;">11주차</div>
+        <div style="width:64px;height:64px;border-radius:50%;background:#EFF6FF;border:2px solid #BFDBFE;display:flex;align-items:center;justify-content:center;">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="11" y="2" width="8" height="6" rx="1.5" fill="none" stroke="#2563EB" stroke-width="1.8"></rect><rect x="2" y="22" width="8" height="6" rx="1.5" fill="none" stroke="#2563EB" stroke-width="1.8"></rect><rect x="20" y="22" width="8" height="6" rx="1.5" fill="none" stroke="#2563EB" stroke-width="1.8"></rect><line x1="15" y1="8" x2="15" y2="15" stroke="#2563EB" stroke-width="1.5"></line><line x1="6" y1="15" x2="24" y2="15" stroke="#2563EB" stroke-width="1.5"></line><line x1="6" y1="15" x2="6" y2="22" stroke="#2563EB" stroke-width="1.5"></line><line x1="24" y1="15" x2="24" y2="22" stroke="#2563EB" stroke-width="1.5"></line></svg>
+        </div>
+        <p style="font-size:25px;font-weight:600;color:#374151;margin:8px 0 0;text-align:center;">업무 시스템화</p>
+      </div>
+      <div style="border-top:2px dashed #BFDBFE;flex:1;margin-top:40px;"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;width:148px;">
+        <div style="background:#EF4444;color:#fff;border-radius:20px;padding:3px 12px;font-size:22px;font-weight:700;margin-bottom:8px;">12주차</div>
+        <div style="width:64px;height:64px;border-radius:50%;background:#FEF2F2;border:2px solid #FECACA;display:flex;align-items:center;justify-content:center;">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="12" stroke="#EF4444" stroke-width="2" fill="none"></circle><circle cx="15" cy="15" r="7" stroke="#EF4444" stroke-width="2" fill="none"></circle><circle cx="15" cy="15" r="3" fill="#EF4444"></circle></svg>
+        </div>
+        <p style="font-size:25px;font-weight:600;color:#374151;margin:8px 0 0;text-align:center;">수익화 실행</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TARGET -->
+<section id="target" style="background:#F5F8FF;padding:80px 64px;">
+  <div style="max-width:1680px;margin:0 auto;">
+    <h2 style="text-align:center;font-size:68px;font-weight:800;color:#111827;margin:0 0 48px;letter-spacing:-0.5px;">이런 분께 추천합니다</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+
+      <div class="target-card" style="background:#fff;border-radius:20px;padding:36px 28px 32px;text-align:center;border:1.5px solid #E5E7EB;box-shadow:0 4px 20px rgba(0,0,0,0.04);">
+        <div style="width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+          <svg width="48" height="52" viewBox="0 0 48 52" fill="none"><circle cx="24" cy="16" r="13" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"></circle><path d="M8 48 C8 37 14 30 24 30 C34 30 40 37 40 48" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"></path><rect x="17" y="34" width="18" height="11" rx="2" fill="#2563EB"></rect><rect x="15" y="44" width="22" height="3" rx="1" fill="#1D4ED8"></rect></svg>
+        </div>
+        <h3 style="font-size:34px;font-weight:700;color:#111827;margin:0 0 10px;">1인 기업가</h3>
+        <p style="font-size:27px;color:#6B7280;line-height:1.75;margin:0;">혼자 모든 일을 해결하여<br>성장하고 싶은 분</p>
+      </div>
+
+      <div class="target-card-green" style="background:#fff;border-radius:20px;padding:36px 28px 32px;text-align:center;border:1.5px solid #E5E7EB;box-shadow:0 4px 20px rgba(0,0,0,0.04);">
+        <div style="width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#ECFDF5,#D1FAE5);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none"><rect x="8" y="26" width="36" height="24" rx="2" fill="#D1FAE5" stroke="#10B981" stroke-width="2"></rect><path d="M4 26 L48 26 L42 13 L10 13 Z" fill="#10B981"></path><rect x="19" y="38" width="14" height="14" rx="2" fill="#065F46"></rect><rect x="8" y="32" width="12" height="9" rx="2" fill="#6EE7B7"></rect><rect x="32" y="32" width="12" height="9" rx="2" fill="#6EE7B7"></rect></svg>
+        </div>
+        <h3 style="font-size:34px;font-weight:700;color:#111827;margin:0 0 10px;">소상공인</h3>
+        <p style="font-size:27px;color:#6B7280;line-height:1.75;margin:0;">매출과 마케팅을 효율적으로<br>만들고 싶은 분</p>
+      </div>
+
+      <div class="target-card-pink" style="background:#fff;border-radius:20px;padding:36px 28px 32px;text-align:center;border:1.5px solid #E5E7EB;box-shadow:0 4px 20px rgba(0,0,0,0.04);">
+        <div style="width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#FDF2F8,#FCE7F3);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+          <svg width="48" height="52" viewBox="0 0 48 52" fill="none"><circle cx="20" cy="15" r="12" fill="#FCE7F3" stroke="#EC4899" stroke-width="2"></circle><path d="M5 47 C5 36 11 29 20 29 C29 29 35 36 35 47" fill="#FDF2F8" stroke="#EC4899" stroke-width="2"></path><rect x="35" y="18" width="12" height="18" rx="2" fill="none" stroke="#EC4899" stroke-width="1.5"></rect><rect x="37" y="27" width="2" height="9" rx="1" fill="#EC4899"></rect><rect x="40" y="22" width="2" height="14" rx="1" fill="#EC4899"></rect><rect x="43" y="25" width="2" height="11" rx="1" fill="#EC4899"></rect></svg>
+        </div>
+        <h3 style="font-size:34px;font-weight:700;color:#111827;margin:0 0 10px;">마케터</h3>
+        <p style="font-size:27px;color:#6B7280;line-height:1.75;margin:0;">업무 효율을 높이고<br>성과를 내고 싶은 분</p>
+      </div>
+
+      <div class="target-card-purple" style="background:#fff;border-radius:20px;padding:36px 28px 32px;text-align:center;border:1.5px solid #E5E7EB;box-shadow:0 4px 20px rgba(0,0,0,0.04);">
+        <div style="width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#F5F3FF,#EDE9FE);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="16" r="13" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"></circle><path d="M10 48 C10 37 16 30 26 30 C36 30 42 37 42 48" fill="#F5F3FF" stroke="#7C3AED" stroke-width="2"></path><line x1="36" y1="33" x2="46" y2="20" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"></line><circle cx="46" cy="20" r="3" fill="#7C3AED"></circle></svg>
+        </div>
+        <h3 style="font-size:34px;font-weight:700;color:#111827;margin:0 0 10px;">강사·컨설턴트</h3>
+        <p style="font-size:27px;color:#6B7280;line-height:1.75;margin:0;">콘텐츠와 시스템으로<br>비즈니스를 확장하고 싶은 분</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results" style="background:#fff;padding:80px 64px;">
+  <div style="max-width:1680px;margin:0 auto;">
+    <h2 style="text-align:center;font-size:68px;font-weight:800;color:#111827;margin:0 0 48px;letter-spacing:-0.5px;">수강 후 얻게 되는 변화</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+
+      <div style="background:#F5F8FF;border-radius:18px;padding:32px 28px;border:1.5px solid #E5E7EB;">
+        <p style="font-size:27px;font-weight:700;color:#374151;margin:0 0 14px;">콘텐츠 제작 속도 상승</p>
+        <div style="font-size:112px;font-weight:900;color:#2563EB;line-height:1;margin:0 0 8px;letter-spacing:-2px;">3배</div>
+        <p style="font-size:26px;color:#9CA3AF;margin:0 0 20px;line-height:1.6;">아이디어를 빠르게<br>콘텐츠로 제작</p>
+        <div style="height:36px;display:flex;align-items:flex-end;gap:3px;">
+          <div style="background:#BFDBFE;width:10px;height:14px;border-radius:3px;"></div>
+          <div style="background:#93C5FD;width:10px;height:20px;border-radius:3px;"></div>
+          <div style="background:#60A5FA;width:10px;height:16px;border-radius:3px;"></div>
+          <div style="background:#3B82F6;width:10px;height:26px;border-radius:3px;"></div>
+          <div style="background:#2563EB;width:10px;height:36px;border-radius:3px;"></div>
+        </div>
+      </div>
+
+      <div style="background:#F5F8FF;border-radius:18px;padding:32px 28px;border:1.5px solid #E5E7EB;">
+        <p style="font-size:27px;font-weight:700;color:#374151;margin:0 0 14px;">리드 수집 구조 확보</p>
+        <div style="font-size:112px;font-weight:900;color:#2563EB;line-height:1;margin:0 0 8px;letter-spacing:-2px;">2배</div>
+        <p style="font-size:26px;color:#9CA3AF;margin:0 0 20px;line-height:1.6;">리드 수집 시스템으로<br>지속적 유입 확보</p>
+        <div style="display:flex;gap:4px;flex-wrap:wrap;">
+          <div style="width:16px;height:16px;background:#BFDBFE;border-radius:50%;"></div>
+          <div style="width:16px;height:16px;background:#93C5FD;border-radius:50%;"></div>
+          <div style="width:16px;height:16px;background:#60A5FA;border-radius:50%;"></div>
+          <div style="width:16px;height:16px;background:#3B82F6;border-radius:50%;margin-left:8px;"></div>
+          <div style="width:16px;height:16px;background:#2563EB;border-radius:50%;"></div>
+          <div style="width:16px;height:16px;background:#1D4ED8;border-radius:50%;"></div>
+        </div>
+      </div>
+
+      <div style="background:#F5F8FF;border-radius:18px;padding:32px 28px;border:1.5px solid #E5E7EB;">
+        <p style="font-size:27px;font-weight:700;color:#374151;margin:0 0 14px;">AI 자동화 업무 체계 완성</p>
+        <div style="font-size:112px;font-weight:900;color:#2563EB;line-height:1;margin:0 0 8px;letter-spacing:-2px;">60%</div>
+        <p style="font-size:26px;color:#9CA3AF;margin:0 0 20px;line-height:1.6;">반복 업무 자동화로<br>업무 시간 대폭 절감</p>
+        <div style="width:100%;background:#E5E7EB;border-radius:8px;height:8px;overflow:hidden;">
+          <div style="background:linear-gradient(90deg,#2563EB,#60A5FA);height:100%;width:60%;border-radius:8px;"></div>
+        </div>
+      </div>
+
+      <div style="background:#F5F8FF;border-radius:18px;padding:32px 28px;border:1.5px solid #E5E7EB;">
+        <p style="font-size:27px;font-weight:700;color:#374151;margin:0 0 14px;">매출로 연결되는 실행력 강화</p>
+        <div style="font-size:104px;font-weight:900;color:#10B981;line-height:1;margin:0 0 8px;letter-spacing:-2px;">+30%</div>
+        <p style="font-size:26px;color:#9CA3AF;margin:0 0 20px;line-height:1.6;">수익화 전략 실행으로<br>매출 성장</p>
+        <div style="height:36px;display:flex;align-items:flex-end;gap:3px;">
+          <div style="background:#D1FAE5;width:10px;height:12px;border-radius:3px;"></div>
+          <div style="background:#A7F3D0;width:10px;height:18px;border-radius:3px;"></div>
+          <div style="background:#6EE7B7;width:10px;height:22px;border-radius:3px;"></div>
+          <div style="background:#34D399;width:10px;height:28px;border-radius:3px;"></div>
+          <div style="background:#10B981;width:10px;height:36px;border-radius:3px;"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section style="background:#F5F8FF;padding:80px 64px;">
+  <div style="max-width:1500px;margin:0 auto;">
+    <h2 style="text-align:center;font-size:68px;font-weight:800;color:#111827;margin:0 0 52px;letter-spacing:-0.5px;">학습 흐름</h2>
+    <div style="display:flex;align-items:flex-start;gap:0;">
+
+      <div style="flex:1;text-align:center;">
+        <div style="width:48px;height:48px;border-radius:50%;background:#2563EB;color:#fff;font-size:36px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">1</div>
+        <div style="width:68px;height:68px;border-radius:16px;background:#EFF6FF;border:2px solid #BFDBFE;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="13" r="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"></circle><rect x="13" y="21" width="6" height="5" rx="1" fill="none" stroke="#F59E0B" stroke-width="2"></rect><line x1="13" y1="26" x2="19" y2="26" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"></line></svg>
+        </div>
+        <h4 style="font-size:30px;font-weight:700;color:#111827;margin:0 0 6px;">이해</h4>
+        <p style="font-size:25px;color:#6B7280;margin:0;line-height:1.6;">개념과 원리를<br>명확히 이해</p>
+      </div>
+      <div style="flex:0 0 36px;display:flex;align-items:center;justify-content:center;margin-top:30px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12 L18 12" stroke="#2563EB" stroke-width="2" stroke-linecap="round"></path><path d="M15 9 L18 12 L15 15" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+      </div>
+
+      <div style="flex:1;text-align:center;">
+        <div style="width:48px;height:48px;border-radius:50%;background:#2563EB;color:#fff;font-size:36px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">2</div>
+        <div style="width:68px;height:68px;border-radius:16px;background:#EFF6FF;border:2px solid #BFDBFE;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="5" y="5" width="22" height="22" rx="3" fill="none" stroke="#2563EB" stroke-width="2"></rect><line x1="10" y1="11" x2="22" y2="11" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"></line><line x1="10" y1="16" x2="22" y2="16" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"></line><line x1="10" y1="21" x2="16" y2="21" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"></line><circle cx="22" cy="21" r="4" fill="#2563EB"></circle><path d="M20 21 L21.5 22.5 L24.5 19.5" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+        <h4 style="font-size:30px;font-weight:700;color:#111827;margin:0 0 6px;">실습</h4>
+        <p style="font-size:25px;color:#6B7280;margin:0;line-height:1.6;">핵심 도구를 직접<br>실습하며 익히기</p>
+      </div>
+      <div style="flex:0 0 36px;display:flex;align-items:center;justify-content:center;margin-top:30px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12 L18 12" stroke="#2563EB" stroke-width="2" stroke-linecap="round"></path><path d="M15 9 L18 12 L15 15" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+      </div>
+
+      <div style="flex:1;text-align:center;">
+        <div style="width:48px;height:48px;border-radius:50%;background:#2563EB;color:#fff;font-size:36px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">3</div>
+        <div style="width:68px;height:68px;border-radius:16px;background:#ECFDF5;border:2px solid #A7F3D0;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4 L20 8 L20 12 L24 12 L28 16 L24 20 L20 20 L20 24 L16 28 L12 24 L12 20 L8 20 L4 16 L8 12 L12 12 L12 8 Z" fill="none" stroke="#10B981" stroke-width="2" stroke-linejoin="round"></path><circle cx="16" cy="16" r="3" fill="#10B981"></circle></svg>
+        </div>
+        <h4 style="font-size:30px;font-weight:700;color:#111827;margin:0 0 6px;">적용</h4>
+        <p style="font-size:25px;color:#6B7280;margin:0;line-height:1.6;">실제 업무와 프로젝트에<br>바로 적용하기</p>
+      </div>
+      <div style="flex:0 0 36px;display:flex;align-items:center;justify-content:center;margin-top:30px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12 L18 12" stroke="#2563EB" stroke-width="2" stroke-linecap="round"></path><path d="M15 9 L18 12 L15 15" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+      </div>
+
+      <div style="flex:1;text-align:center;">
+        <div style="width:48px;height:48px;border-radius:50%;background:#7C3AED;color:#fff;font-size:36px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">4</div>
+        <div style="width:68px;height:68px;border-radius:16px;background:#EDE9FE;border:2px solid #C4B5FD;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="5" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"></circle><circle cx="16" cy="16" r="10" fill="none" stroke="#7C3AED" stroke-width="2" stroke-dasharray="4 2.5"></circle></svg>
+        </div>
+        <h4 style="font-size:30px;font-weight:700;color:#111827;margin:0 0 6px;">자동화</h4>
+        <p style="font-size:25px;color:#6B7280;margin:0;line-height:1.6;">반복 업무를 시스템으로<br>자동화 구축</p>
+      </div>
+      <div style="flex:0 0 36px;display:flex;align-items:center;justify-content:center;margin-top:30px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12 L18 12" stroke="#2563EB" stroke-width="2" stroke-linecap="round"></path><path d="M15 9 L18 12 L15 15" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+      </div>
+
+      <div style="flex:1;text-align:center;">
+        <div style="width:48px;height:48px;border-radius:50%;background:#10B981;color:#fff;font-size:36px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">5</div>
+        <div style="width:68px;height:68px;border-radius:16px;background:#ECFDF5;border:2px solid #A7F3D0;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="5" y="22" width="6" height="8" rx="2" fill="#10B981"></rect><rect x="13" y="16" width="6" height="14" rx="2" fill="#10B981"></rect><rect x="21" y="10" width="6" height="20" rx="2" fill="#10B981"></rect><polyline points="8,20 16,14 24,8" stroke="#065F46" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>
+        </div>
+        <h4 style="font-size:30px;font-weight:700;color:#111827;margin:0 0 6px;">수익화</h4>
+        <p style="font-size:25px;color:#6B7280;margin:0;line-height:1.6;">성과를 수익으로 연결하고<br>지속 성장하기</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="apply" style="background:linear-gradient(135deg,#040C28 0%,#0F1E5C 50%,#1D4ED8 100%);padding:72px 64px;">
+  <div style="max-width:1500px;margin:0 auto;display:flex;align-items:center;gap:40px;">
+    <div style="width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+      <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><path d="M22 4 C22 4 32 10 32 22 L32 34 L22 38 L12 34 L12 22 C12 10 22 4 22 4 Z" fill="rgba(255,255,255,0.9)"></path><circle cx="22" cy="18" r="4" fill="#1D4ED8"></circle><path d="M12 30 L7 36 L12 34 Z" fill="rgba(255,255,255,0.7)"></path><path d="M32 30 L37 36 L32 34 Z" fill="rgba(255,255,255,0.7)"></path><ellipse cx="22" cy="39" rx="4" ry="3" fill="#F59E0B"></ellipse></svg>
+    </div>
+    <div style="flex:1;">
+      <h2 style="font-size:56px;font-weight:800;color:#fff;margin:0 0 10px;letter-spacing:-0.5px;line-height:1.3;">이제 AI를 배우는 것을 넘어, 내 시스템으로 만드세요</h2>
+      <p style="font-size:30px;color:rgba(255,255,255,0.65);margin:0;line-height:1.7;">AI 마케팅스쿨 16기에서 12주 동안 실행 중심으로 완성합니다.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;flex-shrink:0;">
+      <a href="#" class="cta-btn-white" style="background:#fff;color:#1D4ED8;text-decoration:none;font-size:30px;font-weight:700;padding:14px 32px;border-radius:10px;white-space:nowrap;text-align:center;display:block;">지금 신청하기</a>
+      <a href="#contact" class="cta-btn-outline" style="border:2px solid rgba(255,255,255,0.4);color:#fff;text-decoration:none;font-size:30px;font-weight:600;padding:12px 32px;border-radius:10px;white-space:nowrap;text-align:center;display:block;">문의하기</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" style="background:#040B26;padding:36px 64px;border-top:1px solid rgba(255,255,255,0.06);">
+  <div style="max-width:1680px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
+    <div style="font-size:34px;font-weight:900;color:#fff;letter-spacing:-0.3px;">AI마케팅스쿨</div>
+    <div style="display:flex;gap:28px;font-size:26px;color:rgba(255,255,255,0.45);">
+      <span>Tel. 02-1234-5678</span>
+      <span>info@aimarketing.school</span>
+      <span>서울특별시 강남구 테헤란로 313, 915호</span>
+    </div>
+    <div style="font-size:25px;color:rgba(255,255,255,0.3);">© AI마케팅스쿨. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

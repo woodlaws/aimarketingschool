@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans KR', -apple-system, sans-serif;
+  margin: 0; padding: 0;
+  color: #111827;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes floatA {
+  0%, 100% { transform: translateY(0px) rotate(-7deg); }
+  50% { transform: translateY(-10px) rotate(-7deg); }
+}
+@keyframes floatB {
+  0%, 100% { transform: translateY(0px) rotate(5deg); }
+  50% { transform: translateY(-8px) rotate(5deg); }
+}
+
+/* NAV */
+.nav-link:hover { color: #fff !important; }
+.nav-apply:hover { background: #1D4ED8 !important; }
+
+/* HERO buttons */
+.btn-primary:hover { background: #1D4ED8 !important; }
+.btn-outline:hover { border-color: rgba(255,255,255,0.65) !important; }
+
+/* Feature cards */
+.feature-card:hover { border-color: #BFDBFE !important; box-shadow: 0 8px 32px rgba(37,99,235,0.08) !important; }
+.feature-card-green:hover { border-color: #A7F3D0 !important; box-shadow: 0 8px 32px rgba(16,185,129,0.08) !important; }
+.feature-card-purple:hover { border-color: #C4B5FD !important; box-shadow: 0 8px 32px rgba(124,58,237,0.08) !important; }
+.feature-card-yellow:hover { border-color: #FDE68A !important; box-shadow: 0 8px 32px rgba(245,158,11,0.08) !important; }
+
+/* Target cards */
+.target-card:hover { box-shadow: 0 12px 40px rgba(37,99,235,0.1) !important; border-color: #BFDBFE !important; }
+.target-card-green:hover { box-shadow: 0 12px 40px rgba(16,185,129,0.1) !important; border-color: #A7F3D0 !important; }
+.target-card-pink:hover { box-shadow: 0 12px 40px rgba(236,72,153,0.1) !important; border-color: #FBCFE8 !important; }
+.target-card-purple:hover { box-shadow: 0 12px 40px rgba(124,58,237,0.1) !important; border-color: #C4B5FD !important; }
+
+/* CTA buttons */
+.cta-btn-white:hover { background: #F0F4FF !important; }
+.cta-btn-outline:hover { border-color: rgba(255,255,255,0.7) !important; }
