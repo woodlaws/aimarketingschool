@@ -1,37 +1,84 @@
-# AI 마케팅스쿨 16기 랜딩페이지
+# AI 마케팅스쿨 랜딩페이지
+
+거상스쿨 AI 마케팅스쿨 16기 공식 랜딩페이지입니다.
+
+---
 
 ## 파일 구조
 
 ```
-/
-├── index.html        # 메인 페이지
-├── style.css         # 스타일시트 (애니메이션, 호버 효과 등)
-├── script.js         # 네비게이션 스크롤 인터랙션
-├── assets/           # 이미지 및 아이콘
+deploy/
+├── index.html          ← 메인 랜딩페이지
+├── support.js          ← DC 런타임 (필수)
+├── images/             ← 이미지 폴더
 │   ├── logo.png
-│   └── a-3_투명.png
-├── README.md
-└── .gitignore
+│   ├── ai-tools-new.png
+│   ├── roadmap-v2.jpg
+│   ├── month1-roadmap-new.jpg
+│   ├── month2-roadmap-new.jpg
+│   ├── month3-roadmap-new.jpg
+│   ├── result-graph-new.jpg
+│   ├── instructor-photo.jpg
+│   ├── instructor-books-v2.jpg
+│   ├── flywheel-detail.png
+│   ├── week1-notion.jpg ~ week12-vibecoding.jpg
+└── README.md
 ```
 
-## 배포 방법 (Vercel)
+---
 
-1. 이 폴더 전체를 GitHub 저장소에 업로드
-2. [vercel.com](https://vercel.com) 접속 후 로그인
-3. **New Project** → GitHub 저장소 선택
-4. Framework Preset: **Other** 선택
-5. **Deploy** 클릭
+## GitHub 업로드 방법
 
-> Vercel은 `index.html`이 루트에 있으면 자동으로 정적 사이트로 인식합니다.
+### 방법 A: GitHub 웹사이트에서 직접 업로드
 
-## 로컬 실행
+1. [github.com](https://github.com) 접속 → 로그인
+2. **New repository** 클릭
+3. Repository name 입력 (예: `ai-marketing-school`)
+4. **Public** 선택 → **Create repository** 클릭
+5. **uploading an existing file** 클릭
+6. `deploy/` 폴더 안의 모든 파일과 `images/` 폴더 전체를 드래그 앤 드롭
+7. **Commit changes** 클릭
+
+### 방법 B: Git CLI 사용
 
 ```bash
-# 간단한 로컬 서버 실행 (Python)
-python3 -m http.server 8080
-
-# 또는 Node.js npx serve
-npx serve .
+git init
+git add .
+git commit -m "AI 마케팅스쿨 랜딩페이지 배포"
+git branch -M main
+git remote add origin https://github.com/[유저명]/[저장소명].git
+git push -u origin main
 ```
 
-브라우저에서 `http://localhost:8080` 접속
+---
+
+## Vercel 배포 방법
+
+1. [vercel.com](https://vercel.com) 접속 → GitHub 계정 연동
+2. **Add New Project** → GitHub 저장소 선택
+3. 아래 설정값 입력 후 **Deploy** 클릭
+
+---
+
+## Vercel 배포 설정값
+
+| 설정 항목 | 입력값 |
+|-----------|--------|
+| **Framework Preset** | Other (None) |
+| **Build Command** | *(비워두기)* |
+| **Output Directory** | . (점 하나) |
+| **Root Directory** | / |
+
+---
+
+## 기술 스택
+
+- HTML5 + CSS3 (반응형)
+- Vanilla JavaScript (React 기반 DC 런타임)
+- Google Fonts (Noto Sans KR)
+- Font Awesome 6.4.0 (CDN)
+- 정적 호스팅 최적화
+
+---
+
+© 2026 거상스쿨. All rights reserved.
