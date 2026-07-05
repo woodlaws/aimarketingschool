@@ -119,7 +119,9 @@ ul,ol{margin:0;padding:0;list-style:none}
   /* === GLOBAL === */
   *,*::before,*::after{box-sizing:border-box!important;max-width:100%}
   html,body{overflow-x:hidden!important;word-break:keep-all!important;overflow-wrap:break-word!important}
-  img{max-width:100%!important;height:auto!important;display:block}
+  img{max-width:100%!important;display:block}
+  .week-card-img img,.curr-month-img img,#result img,#ai-tools img,#instructor img,.flywheel-img img{height:auto!important}
+  footer img,.nav-logo img,.hero-dashboard-col img{max-width:none!important;height:28px!important;width:auto!important}
   /* === NAV === */
   #navbar{height:60px!important}
   .nav-inner{padding:0 16px!important;height:60px!important}
@@ -153,6 +155,11 @@ ul,ol{margin:0;padding:0;list-style:none}
   .hero-stat-item{min-width:80px!important;text-align:center!important}
   .hero-stat-num{font-size:42px!important;line-height:1.1!important;margin-bottom:4px!important}
   .hero-stat-lbl{font-size:14px!important}
+  .hero-stat-num > span:last-child{font-size:18px!important}
+  /* Download banner text on mobile */
+  .curriculum-download div[style*="font-size"]{font-size:16px!important}
+  .curriculum-download div[style*="40px"]{font-size:18px!important}
+  .curriculum-download div[style*="FREE"]{font-size:10px!important}
   /* Info bar */
   .hero-infobar-wrap{width:100%!important}
   .hero-info-inner{flex-direction:column!important;gap:6px!important;border-radius:14px!important;padding:12px 14px!important;width:100%!important;box-sizing:border-box!important}
@@ -181,7 +188,9 @@ ul,ol{margin:0;padding:0;list-style:none}
   .curriculum-download{flex-direction:column!important;padding:18px!important;gap:14px!important;align-items:flex-start!important}
   .curriculum-download > div:last-child{width:100%!important;justify-content:center!important;box-sizing:border-box!important;font-size:14px!important;padding:12px 20px!important}
   /* Checklist */
-  .hero-checklist{flex-direction:column!important;gap:12px!important}
+  .hero-checklist{flex-direction:column!important;gap:10px!important}
+  .hero-checklist > div{font-size:15px!important;gap:8px!important}
+  .hero-checklist > div > span:first-child{width:20px!important;height:20px!important;font-size:10px!important;flex-shrink:0!important}
   /* === SECTION TEXT === */
   h2[style]{font-size:22px!important;line-height:1.3!important}
   p[style*="32px"]{font-size:15px!important;line-height:1.65!important}
@@ -467,20 +476,20 @@ ul,ol{margin:0;padding:0;list-style:none}
       <h2 style="font-size:42px;font-weight:900;line-height:1.2;letter-spacing:-1.5px;margin:0 0 20px;color:#EEF2FF;">
         AI를 매출로 연결하는 <span class="grad-text">실전 시스템</span>
       </h2>
-      <p style="font-size:36px;color:rgba(238,242,255,.55);line-height:1.85;margin:0 0 44px;">
+      <p style="font-size:18px;color:rgba(238,242,255,.55);line-height:1.85;margin:0 0 44px;">
         콘텐츠부터 자동화까지, AI 마케팅의 모든 과정을 하나의 플라이휠로 완성합니다.
       </p>
       <div class="hero-checklist" style="display:flex;justify-content:flex-start;gap:32px;margin-bottom:44px;flex-wrap:wrap;">
-        <div style="display:flex;align-items:center;gap:10px;font-size:30px;color:rgba(238,242,255,.8);">
-          <span style="width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#3B82F6,#06B6D4);display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;flex-shrink:0;"><i class="fa-solid fa-check"></i></span>
+        <div style="display:flex;align-items:center;gap:10px;font-size:16px;color:rgba(238,242,255,.8);">
+          <span style="width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#3B82F6,#06B6D4);display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;flex-shrink:0;"><i class="fa-solid fa-check"></i></span>
           콘텐츠 → SNS 확장 → 리드 수집 자동화
         </div>
-        <div style="display:flex;align-items:center;gap:10px;font-size:30px;color:rgba(238,242,255,.8);">
-          <span style="width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#3B82F6,#06B6D4);display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;flex-shrink:0;"><i class="fa-solid fa-check"></i></span>
+        <div style="display:flex;align-items:center;gap:10px;font-size:16px;color:rgba(238,242,255,.8);">
+          <span style="width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#3B82F6,#06B6D4);display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;flex-shrink:0;"><i class="fa-solid fa-check"></i></span>
           신뢰 구축 → 판매 전환까지 AI 연결
         </div>
-        <div style="display:flex;align-items:center;gap:10px;font-size:30px;color:rgba(238,242,255,.8);">
-          <span style="width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#3B82F6,#06B6D4);display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;flex-shrink:0;"><i class="fa-solid fa-check"></i></span>
+        <div style="display:flex;align-items:center;gap:10px;font-size:16px;color:rgba(238,242,255,.8);">
+          <span style="width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#3B82F6,#06B6D4);display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;flex-shrink:0;"><i class="fa-solid fa-check"></i></span>
           반복·자동화로 지속 성장하는 수익 구조
         </div>
       </div>
@@ -560,8 +569,8 @@ ul,ol{margin:0;padding:0;list-style:none}
           <div style="width:52px;height:52px;background:rgba(255,255,255,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;">📄</div>
           <div>
             <div style="font-size:22px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">FREE DOWNLOAD</div>
-            <div style="font-size:40px;font-weight:900;color:#fff;margin-bottom:4px;">커리큘럼 다운받기</div>
-            <div style="font-size:28px;color:rgba(255,255,255,.55);">전체 12주 커리큘럼 상세 내용을 PDF로 확인하세요</div>
+            <div style="font-size:22px;font-weight:900;color:#fff;margin-bottom:4px;">커리큘럼 다운받기</div>
+            <div style="font-size:15px;color:rgba(255,255,255,.55);">전체 12주 커리큘럼 상세 내용을 PDF로 확인하세요</div>
           </div>
         </div>
         <div style="display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#F59E0B,#FBBF24);color:#0A2463;font-size:28px;font-weight:800;padding:12px 24px;border-radius:50px;white-space:nowrap;flex-shrink:0;box-shadow:0 4px 20px rgba(245,158,11,.4);">
@@ -1172,7 +1181,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 <footer style="background:#050714;border-top:1px solid rgba(255,255,255,.06);padding:40px 48px;">
   <div class="container" style="padding:0 0;">
     <div style="display:flex;align-items:center;gap:8px;font-size:28px;font-weight:900;margin-bottom:12px;">
-      <img src="images/logo.png" alt="로고" style="height:28px;width:auto;"> <span class="logo-ai">AI</span> 마케팅 스쿨
+      <img src="images/logo.png" alt="로고" style="height:28px;width:auto;max-width:none;flex-shrink:0;"> <span class="logo-ai">AI</span> 마케팅 스쿨
     </div>
     <p style="font-size:22px;color:rgba(238,242,255,.4);margin:0 0 8px;"><strong style="color:rgba(238,242,255,.6);">거상스쿨(주)</strong> | AI 마케팅 스쿨 3개월 풀 패키지</p>
     <p style="font-size:22px;color:rgba(238,242,255,.35);margin:0 0 12px;">문의: 권현임 교육팀장 <a href="tel:01057958075" style="color:#60A5FA;">010-5795-8075</a> · 임헌수 대표 <a href="tel:01034228075" style="color:#60A5FA;">010-3422-8075</a> | 기업은행 667-045456-04-010</p>
