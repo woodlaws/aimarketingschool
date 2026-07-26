@@ -60,9 +60,9 @@ ul,ol{margin:0;padding:0;list-style:none}
 .nav-logo{font-size:35px;font-weight:900;display:flex;align-items:center;gap:6px;color:#08142E}
 .logo-ai{background:linear-gradient(90deg,#3B82F6,#06B6D4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .nav-links{display:flex;align-items:center;gap:22px;margin:0;padding:0;list-style:none}
-.nav-links a{color:rgba(8,20,46,.7);font-size:26px;font-weight:500;transition:color .2s}
+.nav-links a{color:rgba(8,20,46,.7);font-size:26px;font-weight:500;white-space:nowrap;line-height:1.2;transition:color .2s}
 .nav-links a:hover{color:#1D4ED8}
-.nav-cta{background:linear-gradient(135deg,#3B82F6,#06B6D4)!important;color:#fff!important;padding:12px 24px;border-radius:50px;font-weight:700!important;transition:opacity .2s,transform .2s!important}
+.nav-cta{background:linear-gradient(135deg,#3B82F6,#06B6D4)!important;color:#fff!important;padding:12px 24px;border-radius:50px;white-space:nowrap;line-height:1.2;font-weight:700!important;transition:opacity .2s,transform .2s!important}
 .nav-cta:hover{opacity:.88;transform:translateY(-1px)}
 .hamburger{display:none;flex-direction:column;gap:7px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{width:32px;height:3px;background:#08142E;border-radius:2px;display:block}
@@ -77,7 +77,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 .nav-drop-card{min-width:400px;background:#fff;border:1px solid rgba(8,20,46,.1);border-radius:16px;box-shadow:0 20px 44px rgba(8,20,46,.18);padding:10px}
 .nav-drop-card a{display:block!important;padding:11px 14px;border-radius:10px;color:#08142E!important;font-size:23.5px!important;font-weight:700!important;line-height:1.35}
 .nav-drop-card a:hover{background:#EEF3FB;color:#1D4ED8!important}
-@media(max-width:1440px) and (min-width:769px){.nav-links a{font-size:21px}.nav-links{gap:16px}.nav-drop-card a{font-size:20px!important}.nav-drop-card a em{font-size:17px}.nav-drop-card{min-width:350px}.nav-logo{font-size:28px}}
+@media(max-width:1440px) and (min-width:1101px){.nav-links a{font-size:21px}.nav-links{gap:16px}.nav-drop-card a{font-size:20px!important}.nav-drop-card a em{font-size:17px}.nav-drop-card{min-width:350px}.nav-logo{font-size:28px}}
+@media(max-width:1100px){.nav-links{display:none!important}.hamburger{display:flex!important}.nav-logo{font-size:26px}.nav-inner{padding:0 24px}}
 .nav-drop-card a em{display:block;font-style:normal;font-size:20px;font-weight:500;color:rgba(8,20,46,.5);margin-top:3px}
 .mob-acc{display:flex;align-items:center;justify-content:space-between;width:100%;background:none;border:none;border-bottom:1px solid rgba(8,20,46,.07);padding:16px 0;font-family:inherit;font-size:28px;font-weight:600;color:rgba(8,20,46,.78);cursor:pointer}
 .mob-sub{display:none}
@@ -167,12 +168,12 @@ ul,ol{margin:0;padding:0;list-style:none}
 .spec-label{font-size:16.7px;color:rgba(238,242,255,.4);margin-bottom:5px;font-weight:600;letter-spacing:.5px;text-transform:uppercase}
 .spec-value{font-size:19.5px;color:#EEF2FF;font-weight:600;line-height:1.5}
   @media(max-width:1400px) and (min-width:769px){
-    #hero{padding:90px 0 50px!important}
+    #hero{padding:130px 0 50px!important}
     .section{padding:60px 0!important}
     #cta-final{padding:60px 0!important}
   }
   @media(max-width:1024px) and (min-width:769px){
-    #hero{padding:70px 0 36px!important}
+    #hero{padding:120px 0 36px!important}
     .section{padding:48px 0!important}
     .hero-grid{grid-template-columns:1fr!important;gap:0!important}
     .hero-dashboard-col{display:none!important}
@@ -204,7 +205,7 @@ ul,ol{margin:0;padding:0;list-style:none}
   .section-desc{font-size:22.1px!important;line-height:1.6!important}
   .section-label{font-size:11.1px!important;padding:5px 12px!important}
   /* === HERO === */
-  #hero{padding:76px 0 32px!important}
+  #hero{padding:96px 0 32px!important}
   .hero-grid{grid-template-columns:1fr!important;gap:0!important;margin-bottom:20px!important}
   .hero-dashboard-col{display:none!important}
   #hero h1{font-size:23.5px!important;letter-spacing:-.5px!important;line-height:1.2!important;margin-bottom:12px!important}
@@ -304,7 +305,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 <!-- NAVBAR -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="/#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="nav-logo" style="text-decoration:none;color:#08142E;cursor:pointer;">
+    <a href="/" class="nav-logo" style="text-decoration:none;color:#08142E;cursor:pointer;">
       <img src="images/logo.png" alt="거상스쿨 로고" style="height:38.4px;width:auto;flex-shrink:0;">
       <span class="logo-ai">AI</span> 마케팅스쿨
     </a>
@@ -2003,17 +2004,6 @@ ul,ol{margin:0;padding:0;list-style:none}
     </div>
     <p style="font-size:15.3px;color:rgba(238,242,255,.4);margin:0 0 8px;"><strong style="color:rgba(238,242,255,.6);">거상스쿨(주)</strong> | AI 마케팅 스쿨 3개월 풀 패키지</p>
     <p style="font-size:15.3px;color:rgba(238,242,255,.35);margin:0 0 12px;">문의: 권현임 교육팀장 <a href="tel:01057958075" style="color:#60A5FA;">010-5795-8075</a> · 임헌수 대표 <a href="tel:01034228075" style="color:#60A5FA;">010-3422-8075</a> | 기업은행 667-045456-04-010</p>
-    <div style="display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 18px;">
-      <a href="/support" style="font-size:15.3px;font-weight:700;color:rgba(238,242,255,.65);background:rgba(255,255,255,.06);border-radius:50px;padding:9px 15px;">학습지원센터</a>
-      <a href="/preparation" style="font-size:15.3px;font-weight:700;color:rgba(238,242,255,.65);background:rgba(255,255,255,.06);border-radius:50px;padding:9px 15px;">수강 준비물</a>
-      <a href="/checklist" style="font-size:15.3px;font-weight:700;color:rgba(238,242,255,.65);background:rgba(255,255,255,.06);border-radius:50px;padding:9px 15px;">첫 수업 체크리스트</a>
-      <a href="/resources" style="font-size:15.3px;font-weight:700;color:rgba(238,242,255,.65);background:rgba(255,255,255,.06);border-radius:50px;padding:9px 15px;">자료·녹화본</a>
-      <a href="/cafe" style="font-size:15.3px;font-weight:700;color:rgba(238,242,255,.65);background:rgba(255,255,255,.06);border-radius:50px;padding:9px 15px;">네이버 카페 안내</a>
-      <a href="/zoom" style="font-size:15.3px;font-weight:700;color:rgba(238,242,255,.65);background:rgba(255,255,255,.06);border-radius:50px;padding:9px 15px;">줌 라이브 안내</a>
-      <a href="/homework" style="font-size:15.3px;font-weight:700;color:rgba(238,242,255,.65);background:rgba(255,255,255,.06);border-radius:50px;padding:9px 15px;">과제 안내</a>
-      <a href="/roadmap" style="font-size:15.3px;font-weight:700;color:rgba(238,242,255,.65);background:rgba(255,255,255,.06);border-radius:50px;padding:9px 15px;">주차별 로드맵</a>
-      <a href="/faq" style="font-size:15.3px;font-weight:700;color:rgba(238,242,255,.65);background:rgba(255,255,255,.06);border-radius:50px;padding:9px 15px;">FAQ</a>
-    </div>
     <p style="font-size:13.9px;color:rgba(238,242,255,.2);margin:0;">© 2026 거상스쿨. All rights reserved.</p>
   </div>
 </footer>
@@ -2119,9 +2109,26 @@ class Component extends DCLogic {
       hash = i >= 0 ? href.slice(i + 1) : '';
       if (!path) path = '/';
     } else return;
+    if (path === '/' && hash) { e.preventDefault(); this.goHomeSection(hash); return; }
     if (path !== '/' && known.indexOf(path) < 0) return;
     e.preventDefault();
-    this.go(path, hash);
+    this.go(path, '');
+  }
+
+  goHomeSection(id) {
+    try { history.pushState(null, '', this._base + '/'); } catch (e) {}
+    const scroll = () => {
+      const el = document.getElementById(id);
+      if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 86, behavior: 'smooth' });
+      else window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    if (this.state.route !== '/') {
+      this.setState({ route: '/', mobileOpen: false, supportOpen: false });
+      requestAnimationFrame(() => requestAnimationFrame(scroll));
+    } else {
+      this.setState({ mobileOpen: false, supportOpen: false });
+      scroll();
+    }
   }
 
   applyRoute() {
@@ -2130,6 +2137,7 @@ class Component extends DCLogic {
     const anchor = (h && h.charAt(0) !== '/') ? h : '';
     this.setState({ route: r, mobileOpen: false, supportOpen: false });
     if (r === '/' && anchor) {
+      try { history.replaceState(null, '', this._base + '/'); } catch (e) {}
       requestAnimationFrame(() => requestAnimationFrame(() => {
         const el = document.getElementById(anchor);
         if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 86, behavior: 'smooth' });
