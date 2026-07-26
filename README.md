@@ -18,6 +18,7 @@ HOME(모집 랜딩페이지) + 학습지원센터 9개 페이지가 하나의 �
 ├── apple-touch-icon.png ← iOS 홈화면 아이콘 (180px, 흰 배경)
 ├── icon-192.png / icon-512.png
 ├── site.webmanifest    ← PWA 아이콘 메타
+├── vercel.json         ← 클린 URL rewrite (필수, 삭제하면 /support 새로고침 시 404)
 ├── robots.txt
 ├── sitemap.xml
 ├── llms.txt            ← AI 검색(GEO/AEO)용 사이트 요약
@@ -32,15 +33,15 @@ HOME(모집 랜딩페이지) + 학습지원센터 9개 페이지가 하나의 �
 | 페이지 | 주소 |
 |---|---|
 | HOME (모집 랜딩) | `/` |
-| 학습지원센터 메인 | `/#/support` |
-| 수강 준비물 | `/#/preparation` |
-| 첫 수업 체크리스트 | `/#/checklist` |
-| 자료·녹화본 | `/#/resources` |
-| 네이버 카페 안내 | `/#/cafe` |
-| 줌 라이브 안내 | `/#/zoom` |
-| 과제 안내 | `/#/homework` |
-| 주차별 로드맵 | `/#/roadmap` |
-| FAQ | `/#/faq` |
+| 학습지원센터 메인 | `/support` |
+| 수강 준비물 | `/preparation` |
+| 첫 수업 체크리스트 | `/checklist` |
+| 자료·녹화본 | `/resources` |
+| 네이버 카페 안내 | `/cafe` |
+| 줌 라이브 안내 | `/zoom` |
+| 과제 안내 | `/homework` |
+| 주차별 로드맵 | `/roadmap` |
+| FAQ | `/faq` |
 
 상단 메뉴 "학습지원센터 ▼" 에서 8개 하위 페이지로 이동합니다. (모바일은 햄버거 메뉴 안 아코디언)
 
@@ -77,6 +78,8 @@ git push -u origin main
 | Root Directory | / |
 | Install Command | *(비워두기)* |
 
+`vercel.json` 이 모든 경로를 `index.html` 로 rewrite 하므로 `/support` 같은 주소를 직접 열거나 새로고침해도 404가 나지 않습니다. (# 없는 클린 URL 구조)
+
 배포 후 **Settings → Domains** 에서 `www.aimarketing.school` 연결.
 
 ---
@@ -85,6 +88,8 @@ git push -u origin main
 
 - [ ] HOME 히어로·커리큘럼·강사·수강 안내·FAQ 정상 표시
 - [ ] 상단 "학습지원센터 ▼" 드롭다운 8개 메뉴 이동 확인
+- [ ] 주소창에 `#` 이 붙지 않는지 확인 (`/support`, `/resources` 등)
+- [ ] `/support` 직접 접속 + 새로고침 시 404 안 나는지 확인
 - [ ] 모바일 햄버거 → 학습지원센터 아코디언 펼침 확인
 - [ ] 첫 수업 체크리스트 체크 저장 확인
 - [ ] 페이지 소스보기에서 naver / google verification 메타 확인
@@ -96,9 +101,9 @@ git push -u origin main
 
 ## 아직 채워야 할 항목 ([링크 입력 예정])
 
-- 구글 드라이브 자료실 링크 — /#/resources
-- 유튜브 녹화본 재생목록 링크 — /#/resources, /#/roadmap
-- 네이버 카페 링크 — /#/cafe
+- 구글 드라이브 자료실 링크 — /resources
+- 유튜브 녹화본 재생목록 링크 — /resources, /roadmap
+- 네이버 카페 링크 — /cafe
 - 각 페이지 캡처 이미지 (점선 박스 자리)
 
 ---
