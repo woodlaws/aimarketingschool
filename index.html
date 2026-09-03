@@ -56,8 +56,9 @@ ul,ol{margin:0;padding:0;list-style:none}
 .responsive-contain-image{display:block;width:100%;height:auto;object-fit:contain}
 .ai-solutions-image{background:#000}
 .ai-solutions-caption{max-width:1100px;margin:24px auto 0;text-align:center;color:rgba(255,255,255,.76);font-size:clamp(17px,1.25vw,21px);line-height:1.75;font-weight:500}
-.image-preview-dialog{width:min(96vw,1800px);max-width:none;max-height:96vh;margin:auto;padding:52px 12px 12px;border:0;border-radius:18px;background:#000;box-shadow:0 28px 100px rgba(0,0,0,.7);overflow:auto}
-.image-preview-dialog::backdrop{background:rgba(0,0,0,.88);backdrop-filter:blur(4px)}
+.image-preview-dialog{position:fixed;inset:0;z-index:2000;display:none;align-items:center;justify-content:center;padding:2vw;background:rgba(0,0,0,.88);backdrop-filter:blur(4px)}
+.image-preview-dialog.open{display:flex}
+.image-preview-panel{position:relative;z-index:1;width:min(96vw,1800px);max-height:96vh;padding:52px 12px 12px;border-radius:18px;background:#000;box-shadow:0 28px 100px rgba(0,0,0,.7);overflow:auto}
 .image-preview-dialog img{display:block;width:100%;height:auto;max-height:calc(96vh - 64px);object-fit:contain;margin:auto}
 .image-preview-close{position:absolute;top:10px;right:12px;width:38px;height:38px;border:1px solid rgba(255,255,255,.28);border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:26px;line-height:1;cursor:pointer}
 .image-preview-close:hover,.image-preview-close:focus-visible{background:rgba(255,255,255,.24);outline:2px solid #60A5FA;outline-offset:2px}
@@ -66,7 +67,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .month-3-weeks{margin-top:28px}
 .month-3-weeks .week-card{padding:24px}
 .month-3-weeks .week-card p{font-size:18.1px;color:rgba(8,20,46,.6);line-height:1.7;margin:10px 0 0}
-@media(max-width:767px){.ai-solutions-media{padding:6px;border-radius:14px}.ai-solutions-caption{margin-top:18px;font-size:16px;text-align:left}.image-preview-dialog{width:98vw;padding:48px 6px 8px;border-radius:12px}.month-3-weeks{margin-top:20px}.month-3-weeks .week-card{padding:20px}}
+@media(max-width:767px){.ai-solutions-media{padding:6px;border-radius:14px}.ai-solutions-caption{margin-top:18px;font-size:16px;text-align:left}.image-preview-dialog{padding:1vw}.image-preview-panel{width:98vw;padding:48px 6px 8px;border-radius:12px}.month-3-weeks{margin-top:20px}.month-3-weeks .week-card{padding:20px}}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#07091E}::-webkit-scrollbar-thumb{background:#1e3870;border-radius:3px}
 [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
 [data-reveal].revealed{opacity:1;transform:none}
@@ -615,15 +616,17 @@ ul,ol{margin:0;padding:0;list-style:none}
       <h2 class="section-title">강의에서 다루는 AI 도구</h2>
     </div>
     <figure class="ai-solutions-media" data-reveal>
-      <button type="button" class="image-zoom-button" aria-label="AI 솔루션 이미지 크게 보기" aria-haspopup="dialog" onclick="document.querySelector('.ai-solutions-dialog').showModal()">
+      <button type="button" class="image-zoom-button" aria-label="AI 솔루션 이미지 크게 보기" aria-haspopup="dialog" onClick="{{ openAiSolutions }}">
         <img class="responsive-contain-image ai-solutions-image" src="/images/ai-solutions-2026.png" alt="거상스쿨이 교육하는 16가지 AI 솔루션" width="1920" height="1300">
       </button>
       <figcaption class="ai-solutions-caption">업무 생산성부터 SNS 콘텐츠 제작, 협업, 바이브 코딩까지 실무에 필요한 AI 솔루션을 직접 연구하고 교육합니다.</figcaption>
     </figure>
-    <dialog class="image-preview-dialog ai-solutions-dialog" aria-label="AI 솔루션 이미지 확대 보기" onclick="if(event.target===this)this.close()">
-      <button type="button" class="image-preview-close" aria-label="확대 이미지 닫기" onclick="this.closest('dialog').close()">×</button>
-      <img src="/images/ai-solutions-2026.png" alt="거상스쿨이 교육하는 16가지 AI 솔루션" width="1920" height="1300">
-    </dialog>
+    <div class="{{ imageDialogClass }}" role="dialog" aria-modal="true" aria-label="{{ previewLabel }}" aria-hidden="{{ imageDialogHidden }}" onClick="{{ closeAiBackdrop }}">
+      <div class="image-preview-panel">
+        <button type="button" class="image-preview-close" aria-label="확대 이미지 닫기" onClick="{{ closeImagePreview }}">×</button>
+        <img src="{{ previewSrc }}" alt="{{ previewAlt }}" width="{{ previewWidth }}" height="{{ previewHeight }}">
+      </div>
+    </div>
   </div>
 </section>
 
@@ -848,14 +851,10 @@ ul,ol{margin:0;padding:0;list-style:none}
       </div>
     </div>
     <figure class="curr-month-img curriculum-month-3-media" data-reveal>
-      <button type="button" class="image-zoom-button" aria-label="3개월차 커리큘럼 이미지 크게 보기" aria-haspopup="dialog" onclick="document.querySelector('.curriculum-month-3-dialog').showModal()">
+      <button type="button" class="image-zoom-button" aria-label="3개월차 커리큘럼 이미지 크게 보기" aria-haspopup="dialog" onClick="{{ openMonth3 }}">
         <img class="responsive-contain-image" src="/images/curriculum-month-3.png" alt="AI마케팅스쿨 3개월차 자동화와 바이브코딩 실전 커리큘럼" width="1672" height="941" loading="lazy" decoding="async">
       </button>
     </figure>
-    <dialog class="image-preview-dialog curriculum-month-3-dialog" aria-label="AI마케팅스쿨 3개월차 커리큘럼 확대 보기" onclick="if(event.target===this)this.close()">
-      <button type="button" class="image-preview-close" aria-label="확대 이미지 닫기" onclick="this.closest('dialog').close()">×</button>
-      <img src="/images/curriculum-month-3.png" alt="AI마케팅스쿨 3개월차 자동화와 바이브코딩 실전 커리큘럼" width="1672" height="941">
-    </dialog>
     <div class="weeks-grid month-3-weeks">
       <div class="week-card" data-reveal data-reveal-delay="1">
         <div class="week-num-badge">9주차</div>
@@ -2017,7 +2016,7 @@ const CHECKS = [
 ];
 
 class Component extends DCLogic {
-  state = { mobileOpen: false, supportOpen: false, route: '/', done: {} };
+  state = { mobileOpen: false, supportOpen: false, route: '/', done: {}, imagePreview: null };
 
   componentDidMount() {
     this._base = this.detectBase();
@@ -2026,6 +2025,10 @@ class Component extends DCLogic {
     window.addEventListener('hashchange', this.onNav);
     this.onClick = (e) => this.handleLinkClick(e);
     document.addEventListener('click', this.onClick);
+    this.onKeyDown = (e) => {
+      if (e.key === 'Escape' && this.state.imagePreview) this.setState({ imagePreview: null });
+    };
+    document.addEventListener('keydown', this.onKeyDown);
     let done = {};
     try { done = JSON.parse(localStorage.getItem('ams-checklist') || '{}') || {}; } catch (e) {}
     this.setState({ done });
@@ -2037,12 +2040,15 @@ class Component extends DCLogic {
   componentDidUpdate() {
     this.bindReveal();
     this.bindFaq();
+    document.body.style.overflow = this.state.imagePreview ? 'hidden' : '';
   }
 
   componentWillUnmount() {
     window.removeEventListener('popstate', this.onNav);
     window.removeEventListener('hashchange', this.onNav);
     document.removeEventListener('click', this.onClick);
+    document.removeEventListener('keydown', this.onKeyDown);
+    document.body.style.overflow = '';
   }
 
   routes() {
@@ -2080,6 +2086,10 @@ class Component extends DCLogic {
   }
 
   handleLinkClick(e) {
+    if (e.target && e.target.classList && (e.target.classList.contains('image-preview-dialog') || e.target.classList.contains('image-preview-backdrop'))) {
+      this.setState({ imagePreview: null });
+      return;
+    }
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     const a = e.target && e.target.closest ? e.target.closest('a') : null;
     if (!a) return;
@@ -2186,6 +2196,17 @@ class Component extends DCLogic {
       supportCaret: this.state.supportOpen ? '▲' : '▼',
       mobSubClass: this.state.supportOpen ? 'mob-sub open' : 'mob-sub',
       mobileClass: this.state.mobileOpen ? 'mobile-nav open' : 'mobile-nav',
+      openAiSolutions: () => this.setState({ imagePreview: 'ai' }),
+      openMonth3: () => this.setState({ imagePreview: 'month3' }),
+      closeImagePreview: () => this.setState({ imagePreview: null }),
+      closeAiBackdrop: () => this.setState({ imagePreview: null }),
+      imageDialogClass: this.state.imagePreview ? 'image-preview-dialog shared-image-dialog open' : 'image-preview-dialog shared-image-dialog',
+      imageDialogHidden: this.state.imagePreview ? 'false' : 'true',
+      previewSrc: this.state.imagePreview === 'month3' ? '/images/curriculum-month-3.png' : '/images/ai-solutions-2026.png',
+      previewAlt: this.state.imagePreview === 'month3' ? 'AI마케팅스쿨 3개월차 자동화와 바이브코딩 실전 커리큘럼' : '거상스쿨이 교육하는 16가지 AI 솔루션',
+      previewLabel: this.state.imagePreview === 'month3' ? 'AI마케팅스쿨 3개월차 커리큘럼 확대 보기' : 'AI 솔루션 이미지 확대 보기',
+      previewWidth: this.state.imagePreview === 'month3' ? '1672' : '1920',
+      previewHeight: this.state.imagePreview === 'month3' ? '941' : '1300',
       isHome: r === '/',
       isSupport: r === '/support',
       isPrep: r === '/preparation',
