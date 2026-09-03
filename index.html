@@ -50,6 +50,23 @@
 body{margin:0;background:#07091E;color:#EEF2FF;font-family:'Noto Sans KR',sans-serif;scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:hidden;word-break:keep-all}
 img{max-width:100%;display:block}a{text-decoration:none;color:inherit}
 ul,ol{margin:0;padding:0;list-style:none}
+.container.ai-solutions-container{max-width:1560px}
+.ai-solutions-media{margin:0;border-radius:20px;overflow:hidden;border:1px solid rgba(8,20,46,.1);box-shadow:0 0 60px rgba(59,130,246,.08);background:#000;padding:clamp(8px,1.25vw,20px)}
+.image-zoom-button{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in;border-radius:inherit;overflow:hidden}
+.responsive-contain-image{display:block;width:100%;height:auto;object-fit:contain}
+.ai-solutions-image{background:#000}
+.ai-solutions-caption{max-width:1100px;margin:24px auto 0;text-align:center;color:rgba(255,255,255,.76);font-size:clamp(17px,1.25vw,21px);line-height:1.75;font-weight:500}
+.image-preview-dialog{width:min(96vw,1800px);max-width:none;max-height:96vh;margin:auto;padding:52px 12px 12px;border:0;border-radius:18px;background:#000;box-shadow:0 28px 100px rgba(0,0,0,.7);overflow:auto}
+.image-preview-dialog::backdrop{background:rgba(0,0,0,.88);backdrop-filter:blur(4px)}
+.image-preview-dialog img{display:block;width:100%;height:auto;max-height:calc(96vh - 64px);object-fit:contain;margin:auto}
+.image-preview-close{position:absolute;top:10px;right:12px;width:38px;height:38px;border:1px solid rgba(255,255,255,.28);border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:26px;line-height:1;cursor:pointer}
+.image-preview-close:hover,.image-preview-close:focus-visible{background:rgba(255,255,255,.24);outline:2px solid #60A5FA;outline-offset:2px}
+.curriculum-month-3-media{box-shadow:0 16px 48px rgba(8,20,46,.18)}
+.curriculum-month-3-media .image-zoom-button{background:#fff}
+.month-3-weeks{margin-top:28px}
+.month-3-weeks .week-card{padding:24px}
+.month-3-weeks .week-card p{font-size:18.1px;color:rgba(8,20,46,.6);line-height:1.7;margin:10px 0 0}
+@media(max-width:767px){.ai-solutions-media{padding:6px;border-radius:14px}.ai-solutions-caption{margin-top:18px;font-size:16px;text-align:left}.image-preview-dialog{width:98vw;padding:48px 6px 8px;border-radius:12px}.month-3-weeks{margin-top:20px}.month-3-weeks .week-card{padding:20px}}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#07091E}::-webkit-scrollbar-thumb{background:#1e3870;border-radius:3px}
 [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
 [data-reveal].revealed{opacity:1;transform:none}
@@ -369,7 +386,7 @@ ul,ol{margin:0;padding:0;list-style:none}
       <div>
         <div class="hero-badge" style="display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25);border-radius:50px;padding:7px 16px;font-size:18.1px;font-weight:600;color:#60A5FA;margin-bottom:28px;">
           <span style="width:7px;height:7px;border-radius:50%;background:#3B82F6;box-shadow:0 0 8px rgba(59,130,246,.9);display:inline-block;flex-shrink:0;"></span>
-          16기 수업 진행중 · 17기 준비중
+          16기 수업 진행중 · 17기 알림 신청 접수 중
         </div>
         <h1 style="font-size:55.4px;font-weight:900;line-height:1.18;letter-spacing:-2px;margin:0 0 24px;color:#EEF2FF;">
           AI로 <span style="color:#3B82F6;">생산성</span>, <span style="color:#059669;">수익화</span>, <span style="color:#9333EA;">자동화</span><br>
@@ -591,16 +608,22 @@ ul,ol{margin:0;padding:0;list-style:none}
 </section>
 
 <!-- AI TOOLS -->
-<section class="section section-light">
-  <div class="container">
+<section class="section section-light" id="ai-solutions">
+  <div class="container ai-solutions-container">
     <div style="margin-bottom:48px;" data-reveal>
       <div class="section-label">AI 도구</div>
       <h2 class="section-title">강의에서 다루는 AI 도구</h2>
-      <p class="section-desc">업무 생산성부터 협업, SNS 마케팅 콘텐츠 제작까지 가성비 좋은 AI를 직접 연구하고 실전 교육으로 전달합니다.</p>
     </div>
-    <div data-reveal style="border-radius:20px;overflow:hidden;border:1px solid rgba(8,20,46,.1);box-shadow:0 0 60px rgba(59,130,246,.08);">
-      <img src="images/ai-tools-new.png" alt="거상스쿨 AI 솔루션 모음" style="width:100%;">
-    </div>
+    <figure class="ai-solutions-media" data-reveal>
+      <button type="button" class="image-zoom-button" aria-label="AI 솔루션 이미지 크게 보기" aria-haspopup="dialog" onclick="document.querySelector('.ai-solutions-dialog').showModal()">
+        <img class="responsive-contain-image ai-solutions-image" src="/images/ai-solutions-2026.png" alt="거상스쿨이 교육하는 16가지 AI 솔루션" width="1920" height="1300">
+      </button>
+      <figcaption class="ai-solutions-caption">업무 생산성부터 SNS 콘텐츠 제작, 협업, 바이브 코딩까지 실무에 필요한 AI 솔루션을 직접 연구하고 교육합니다.</figcaption>
+    </figure>
+    <dialog class="image-preview-dialog ai-solutions-dialog" aria-label="AI 솔루션 이미지 확대 보기" onclick="if(event.target===this)this.close()">
+      <button type="button" class="image-preview-close" aria-label="확대 이미지 닫기" onclick="this.closest('dialog').close()">×</button>
+      <img src="/images/ai-solutions-2026.png" alt="거상스쿨이 교육하는 16가지 AI 솔루션" width="1920" height="1300">
+    </dialog>
   </div>
 </section>
 
@@ -821,73 +844,39 @@ ul,ol{margin:0;padding:0;list-style:none}
       <div class="curr-month-label" style="background:linear-gradient(135deg,#6B21A8,#9333EA);">
         <div class="month-num">3</div>
         <i class="fa-solid fa-gears"></i>
-        3개월차 &nbsp;·&nbsp; AI 기반 업무자동화·시스템화 실전 &lt;고급 응용&gt;
+        3개월차 &nbsp;·&nbsp; 자동화·바이브코딩 실전
       </div>
     </div>
-    <div class="weeks-grid">
+    <figure class="curr-month-img curriculum-month-3-media" data-reveal>
+      <button type="button" class="image-zoom-button" aria-label="3개월차 커리큘럼 이미지 크게 보기" aria-haspopup="dialog" onclick="document.querySelector('.curriculum-month-3-dialog').showModal()">
+        <img class="responsive-contain-image" src="/images/curriculum-month-3.png" alt="AI마케팅스쿨 3개월차 자동화와 바이브코딩 실전 커리큘럼" width="1672" height="941" loading="lazy" decoding="async">
+      </button>
+    </figure>
+    <dialog class="image-preview-dialog curriculum-month-3-dialog" aria-label="AI마케팅스쿨 3개월차 커리큘럼 확대 보기" onclick="if(event.target===this)this.close()">
+      <button type="button" class="image-preview-close" aria-label="확대 이미지 닫기" onclick="this.closest('dialog').close()">×</button>
+      <img src="/images/curriculum-month-3.png" alt="AI마케팅스쿨 3개월차 자동화와 바이브코딩 실전 커리큘럼" width="1672" height="941">
+    </dialog>
+    <div class="weeks-grid month-3-weeks">
       <div class="week-card" data-reveal data-reveal-delay="1">
-        <div class="week-card-img"><img src="images/week-09-course.png" alt="AI마케팅스쿨 9주차 Codex 자동화 실습 및 데이터 정리 교육과정" width="1254" height="1254" loading="lazy" decoding="async"></div>
-        <div style="padding:22px;">
-          <div class="week-num-badge">9주차</div>
-          <h3 style="font-size:20.9px;font-weight:800;margin:0 0 10px;color:#08142E;line-height:1.4;">ChatGPT Codex 마스터하기</h3>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;"><span class="tool-tag">Codex</span></div>
-          <ul class="week-points">
-            <li>Codex = "말로 시키는 마케팅 자동화 비서" 개념 잡기</li>
-            <li>키워드 순위·블로그 노출 데이터 자동 수집·정리</li>
-            <li>경쟁사 블로그/플레이스 모니터링 자동화</li>
-            <li>광고비·전환율 데이터 자동 정리 &amp; 보고서 초안</li>
-            <li>랜딩페이지 실전 기획 — 퍼널 구조로 설계하기</li>
-          </ul>
-        </div>
+        <div class="week-num-badge">9주차</div>
+        <h3 style="font-size:20.9px;font-weight:800;margin:0;color:#08142E;line-height:1.4;">Codex 자동화 실습</h3>
+        <p>데이터 정리와 반복 업무 자동화, 마케팅 인사이트 도출</p>
       </div>
       <div class="week-card" data-reveal data-reveal-delay="2">
-        <div class="week-card-img"><img src="images/week-10-course.png" alt="AI마케팅스쿨 10주차 Claude Code 웹버전 코딩 에이전트 교육과정" width="1254" height="1254" loading="lazy" decoding="async"></div>
-        <div style="padding:22px;">
-          <div class="week-num-badge">10주차</div>
-          <h3 style="font-size:20.9px;font-weight:800;margin:0 0 10px;color:#08142E;line-height:1.4;">Claude Cowork로 AI 직원과 함께 일하기</h3>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;"><span class="tool-tag">Claude Cowork 기본</span></div>
-          <ul class="week-points">
-            <li>Cowork 기본 구조 &amp; 커넥터 연결하기</li>
-            <li>클라이언트 월간 리포트 자동 생성 시키기</li>
-            <li>견적서 + 제안서 + 후속 이메일 한 번에 연결 자동화</li>
-            <li>블로그 성과 데이터 → 분석 → 인사이트 보고서</li>
-            <li>ROI 기준으로 자동화할 것 vs 직접 할 것 구분하기</li>
-          </ul>
-        </div>
+        <div class="week-num-badge">10주차</div>
+        <h3 style="font-size:20.9px;font-weight:800;margin:0;color:#08142E;line-height:1.4;">Claude Code 활용</h3>
+        <p>자연어로 웹 프로젝트를 생성하고 파일을 수정하며 결과 미리보기</p>
       </div>
       <div class="week-card" data-reveal data-reveal-delay="3">
-        <div class="week-card-img"><img src="images/week-11-course.png" alt="AI마케팅스쿨 11주차 바이브코딩 마케팅 대시보드 구축 교육과정" width="1254" height="1254" loading="lazy" decoding="async"></div>
-        <div style="padding:22px;">
-          <div class="week-num-badge">11주차</div>
-          <h3 style="font-size:20.9px;font-weight:800;margin:0 0 10px;color:#08142E;line-height:1.4;">Claude Cowork로 마케팅 자동화 숙달하기</h3>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;"><span class="tool-tag">Claude Cowork 심화</span></div>
-          <ul class="week-points">
-            <li>Notion 연동 — 수강생/리드 명단 한 번에 정리·업데이트</li>
-            <li>블로그 1개 → 스레드·숏폼 소재까지 자동 확장</li>
-            <li>캘린더 연동 — 특강·런칭 일정 자동 알림 만들기</li>
-            <li>고객 문의·예약 응대 초안 자동으로 받기</li>
-            <li>AI가 만든 결과, 보내기 전에 꼭 확인할 것들</li>
-          </ul>
-        </div>
+        <div class="week-num-badge">11주차</div>
+        <h3 style="font-size:20.9px;font-weight:800;margin:0;color:#08142E;line-height:1.4;">바이브 코딩 실전</h3>
+        <p>마케팅 대시보드 제작, GitHub 연동, Vercel 배포</p>
       </div>
       <div class="week-card" data-reveal data-reveal-delay="4">
-        <div class="week-card-img"><img src="images/week-12-course.png" alt="AI마케팅스쿨 12주차 AI 홈페이지 기획 제작 및 배포 교육과정" width="1254" height="1254" loading="lazy" decoding="async"></div>
-        <div style="padding:22px;">
-          <div class="week-num-badge">12주차</div>
-          <h3 style="font-size:20.9px;font-weight:800;margin:0 0 10px;color:#08142E;line-height:1.4;">바이브코딩 실전 : 랜딩페이지 제작 &amp; 배포</h3>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;"><span class="tool-tag">Codex</span><span class="tool-tag">Claude Code</span><span class="tool-tag">GitHub</span><span class="tool-tag">Vercel</span></div>
-          <ul class="week-points">
-            <li>9주차 기획한 랜딩페이지, Codex에게 만들어줘 시키기</li>
-            <li>GitHub에 내 작업 저장하기</li>
-            <li>Vercel로 원클릭 배포 — 실제 URL로 띄워보기</li>
-            <li>신청 폼 제출 시 카카오톡/이메일 자동 알림 연결</li>
-            <li>내 랜딩페이지 발표하고 서로 피드백하기</li>
-          </ul>
-        </div>
+        <div class="week-num-badge">12주차</div>
+        <h3 style="font-size:20.9px;font-weight:800;margin:0;color:#08142E;line-height:1.4;">AI 홈페이지 완성</h3>
+        <p>홈페이지 기획·디자인·제작·배포 및 최종 서비스 공개</p>
       </div>
-    </div>
-    <div class="curr-month-img" data-reveal>
-      <img src="images/month3-roadmap-new.jpg" alt="3개월차 로드맵">
     </div>
   </div>
 </section>
@@ -1109,14 +1098,14 @@ ul,ol{margin:0;padding:0;list-style:none}
   <div class="container">
     <div class="section-header" data-reveal>
       <div class="section-label">수강 안내</div>
-      <h2 class="section-title">17기 모집을 준비하고 있습니다</h2>
+      <h2 class="section-title">17기 모집 알림을 신청하세요</h2>
       <p class="section-desc">16기 모집은 종료되었습니다. 17기 일정이 확정되면 알림 신청하신 분께 가장 먼저 안내드립니다.</p>
     </div>
     <div style="display:flex;gap:24px;align-items:stretch;flex-wrap:wrap;" data-reveal>
       <!-- 얼리버드 카드 -->
       <div style="flex:1;min-width:280px;display:flex;flex-direction:column;gap:16px;">
         <div class="price-card featured" style="flex:1;">
-          <div style="display:inline-block;font-size:15.3px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#F59E0B;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);padding:4px 12px;border-radius:50px;margin-bottom:16px;">17기 준비중</div>
+          <div style="display:inline-block;font-size:15.3px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#F59E0B;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);padding:4px 12px;border-radius:50px;margin-bottom:16px;">17기 알림 신청 접수 중</div>
           <div style="font-size:19.5px;color:rgba(8,20,46,.55);margin-bottom:8px;">16기 기준 수강료</div>
           <div style="margin-bottom:12px;">
             <span style="font-size:36px;font-weight:900;color:#08142E;letter-spacing:-1px;">600,000원</span>
@@ -1239,7 +1228,7 @@ ul,ol{margin:0;padding:0;list-style:none}
       <div style="display:flex;flex-direction:column;align-items:flex-start;gap:28px;">
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;width:100%;">
           <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px 22px;">
-            <div style="font-size:19.5px;font-weight:900;line-height:1.3;margin-bottom:6px;color:#EEF2FF;">17기 준비중</div>
+            <div style="font-size:19.5px;font-weight:900;line-height:1.3;margin-bottom:6px;color:#EEF2FF;">17기 알림 신청 접수 중</div>
             <div style="font-size:15.3px;color:rgba(238,242,255,.45);font-weight:500;">모집 일정 조율중</div>
           </div>
           <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px 22px;">
